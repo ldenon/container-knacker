@@ -143,17 +143,56 @@ export function generateOrderJSON({
 }
 
 // Neue Funktion: erzeugt JSON und startet Download
-export function exportOrderJSONToFile(params) {
-  const jsonData = generateOrderJSON(params);
-  const jsonString = JSON.stringify(jsonData, null, 2);
+//export function exportOrderJSONToFile(params) {
+//  const jsonData = generateOrderJSON(params);
+//  const jsonString = JSON.stringify(jsonData, null, 2);
 
-  const blob = new Blob([jsonString], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
+ // const blob = new Blob([jsonString], { type: "application/json" });
+ // const url = URL.createObjectURL(blob);
 
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "order.json";
-  a.click();
+  //const a = document.createElement("a");
+  //a.href = url;
+  //a.download = "order.json";
+  //a.click();
 
-  URL.revokeObjectURL(url);
+ // URL.revokeObjectURL(url);
+//}
+
+/**
+ * Erzeugt die Bestell-JSON, sendet sie per POST an einen Server und leitet bei Erfolg weiter.
+ */
+export async function exportOrderJSONToFile(params) {
+  try {
+    // 1. JSON-Daten erzeugen (wie in deinem Originalcode)
+    const jsonData = generateOrderJSON(params);
+    const jsonString = JSON.stringify(jsonData, null, 2);
+
+    // 2. Daten per POST an den Server senden
+    const response = await fetch('localhost:5000/api/optimize', {
+      method: 'POST', // Die HTTP-Methode ist POST
+      headers: {
+        'Content-Type': 'application/json', // Dem Server sagen, dass wir JSON senden
+      },
+      body: jsonString, // Der JSON-String ist der "Körper" der Anfrage
+    });
+
+    // 3. Antwort des Servers prüfen
+    if (response.ok) {
+      // Wenn die Antwort erfolgreich war (z.B. Status 200 OK)
+      console.log('Bestellung erfolgreich an den Server gesendet.');
+      
+      // 4. Weiterleitung zur Erfolgsseite
+      window.location.href = 'localhost:5000/api/ladebalken';
+
+    } else {
+      // Wenn der Server einen Fehler meldet (z.B. Status 400 oder 500)
+      console.error('Fehler vom Server:', response.status, response.statusText);
+      // Optional: Zeige dem Benutzer eine Fehlermeldung
+      alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.');
+    }
+  } catch (error) {
+    // Falls ein Netzwerkfehler auftritt (z.B. keine Verbindung)
+    console.error('Netzwerkfehler oder anderer Fehler:', error);
+    alert('Die Verbindung zum Server konnte nicht hergestellt werden.');
+  }
 }

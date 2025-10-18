@@ -1,0 +1,27 @@
+{
+  "container": {
+    "width": 240.0,
+    "height": 550.0
+  },
+  "item_count": 22,
+  "items": [    {
+      "id": 1,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 0,
+      "center_y": 0,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    },
+    {
+      "id": 21,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 120,
+      "center_y": 80,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    }]
+}

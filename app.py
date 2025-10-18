@@ -37,6 +37,11 @@ def optimize_route():
         
     return jsonify(optimized_data)
 
+@app.route('/api/ladebalken')
+def routeToLadebalken():
+    
+    # Gibt ladebalken.html aus dem templates-Ordner zurück
+    return send_file('./backend_connector/ladebalken.html')
 
 @app.route('/api/generate-pdf', methods=['POST'])
 def generate_pdf_route():
