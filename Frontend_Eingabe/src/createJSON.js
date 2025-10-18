@@ -166,7 +166,6 @@ export async function exportOrderJSONToFile(params) {
     // 1. JSON-Daten erzeugen (wie in deinem Originalcode)
     const jsonData = generateOrderJSON(params);
     const jsonString = JSON.stringify(jsonData, null, 2);
-
     window.location.href = 'http://localhost:5000/api/ladebalken';
 
     // 2. Daten per POST an den Server senden
