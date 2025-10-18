@@ -78,7 +78,7 @@ export function generateOrderJSON({
     };
 
     // Neue Bedingung:
-    if (article.shape === "Zylinder" && article.usesPallet) {
+    if (article.usesPallet) {
       // Rechteck-Form mit Palettenmaßen und kombinierten Höhe
       base.form = {
         type: "rectangle",
@@ -167,29 +167,19 @@ export async function exportOrderJSONToFile(params) {
     const jsonData = generateOrderJSON(params);
     const jsonString = JSON.stringify(jsonData, null, 2);
 
+    window.location.href = 'http://localhost:5000/api/ladebalken';
+
     // 2. Daten per POST an den Server senden
-    const response = await fetch('localhost:5000/api/optimize', {
-      method: 'POST', // Die HTTP-Methode ist POST
+    const response = await fetch('http://localhost:5000/api/optimize', {
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json', // Dem Server sagen, dass wir JSON senden
+        'Content-Type': 'application/json',
       },
-      body: jsonString, // Der JSON-String ist der "Körper" der Anfrage
+      body: jsonString,
     });
 
-    // 3. Antwort des Servers prüfen
-    if (response.ok) {
-      // Wenn die Antwort erfolgreich war (z.B. Status 200 OK)
-      console.log('Bestellung erfolgreich an den Server gesendet.');
-      
-      // 4. Weiterleitung zur Erfolgsseite
-      window.location.href = 'localhost:5000/api/ladebalken';
+    console.log(response)
 
-    } else {
-      // Wenn der Server einen Fehler meldet (z.B. Status 400 oder 500)
-      console.error('Fehler vom Server:', response.status, response.statusText);
-      // Optional: Zeige dem Benutzer eine Fehlermeldung
-      alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.');
-    }
   } catch (error) {
     // Falls ein Netzwerkfehler auftritt (z.B. keine Verbindung)
     console.error('Netzwerkfehler oder anderer Fehler:', error);

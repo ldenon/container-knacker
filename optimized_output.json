@@ -1,0 +1,89 @@
+{
+    "order": {
+        "order_id": "",
+        "delivery_country": "Brasilien",
+        "delivery_region": "Paranagua",
+        "created_at": "2025-10-18T15:57:34.723Z",
+        "updated_at": "2025-10-18T15:57:34.723Z",
+        "container_definitions": [
+            {
+                "type": "20-fuß",
+                "inner_dimensions": {
+                    "length": 5867,
+                    "width": 2330,
+                    "height": 2350
+                },
+                "door_dimensions": {
+                    "width": 2286,
+                    "height": 2261
+                },
+                "max_weight_kg": 22500,
+                "tare_weight_kg": null,
+                "volume_m3": null,
+                "use": true,
+                "numbers": null
+            }
+        ],
+        "objects": [
+            {
+                "id": 1000,
+                "product_name": "yccvs<df",
+                "category": "",
+                "quantity": 1,
+                "weight_kg": 0,
+                "constraints": {
+                    "allow_rotation": false,
+                    "is_stackable": true,
+                    "max_stack_weight_kg": null,
+                    "loading_priority": null,
+                    "temperature_range": {
+                        "min": null,
+                        "max": null
+                    }
+                },
+                "placement": {
+                    "container_type": null,
+                    "container_id": "",
+                    "position": {
+                        "x": null,
+                        "y": null,
+                        "z": null
+                    },
+                    "rotation": {
+                        "x_axis": null,
+                        "y_axis": null,
+                        "z_axis": null
+                    }
+                }
+            }
+        ],
+        "loading_plan": {
+            "containers": [
+                {
+                    "sequence": 1,
+                    "instance_id": "",
+                    "container_id": "",
+                    "type": "",
+                    "total_weight_kg": null,
+                    "efficiency_percent": null,
+                    "placed_objects": [
+                        {
+                            "id": null,
+                            "stack_level": null,
+                            "position": {
+                                "x": null,
+                                "y": null,
+                                "z": null
+                            },
+                            "rotation": {
+                                "x_axis": null,
+                                "y_axis": null,
+                                "z_axis": null
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1210 @@
+{
+  "order": {
+    "order_id": "ORD-2023-1027-A4B8-QTY1",
+    "delivery_country": "DE",
+    "delivery_region": "BW",
+    "created_at": "2023-10-27T10:00:00Z",
+    "updated_at": "2025-10-18T15:35:00Z",
+    "container_definitions": [
+      {
+        "type": "20-fuß",
+        "inner_dimensions": {
+          "length": 5867,
+          "width": 2330,
+          "height": 2350
+        },
+        "door_dimensions": {
+          "width": 2286,
+          "height": 2261
+        },
+        "max_weight_kg": 28200,
+        "tare_weight_kg": 2200,
+        "volume_m3": 33.1,
+        "use": true,
+        "numbers": 5
+      },
+      {
+        "type": "40-fuß",
+        "inner_dimensions": {
+          "length": 11998,
+          "width": 2330,
+          "height": 2350
+        },
+        "door_dimensions": {
+          "width": 2286,
+          "height": 2261
+        },
+        "max_weight_kg": 26500,
+        "tare_weight_kg": 3750,
+        "volume_m3": 67.7,
+        "use": false,
+        "numbers": 0
+      },
+      {
+        "type": "40-fuß-hc",
+        "inner_dimensions": {
+          "length": 11998,
+          "width": 2330,
+          "height": 2655
+        },
+        "door_dimensions": {
+          "width": 2286,
+          "height": 2566
+        },
+        "max_weight_kg": 26480,
+        "tare_weight_kg": 3770,
+        "volume_m3": 76.4,
+        "use": true,
+        "numbers": 3
+      },
+      {
+        "type": "40-fuß-hw",
+        "inner_dimensions": {
+          "length": 11998,
+          "width": 2330,
+          "height": 2350
+        },
+        "door_dimensions": {
+          "width": 2286,
+          "height": 2261
+        },
+        "max_weight_kg": 26500,
+        "tare_weight_kg": 3750,
+        "volume_m3": 67.7,
+        "use": false,
+        "numbers": 0
+      }
+    ],
+    "objects": [
+      {
+        "id": 1,
+        "product_name": "Hauptmaschine Basis",
+        "quantity": 1,
+        "weight_kg": 3500,
+        "form": {
+          "type": "rectangle",
+          "length": 2500,
+          "width": 2000,
+          "height": 1500
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "product_name": "Schaltschrank A",
+        "quantity": 1,
+        "weight_kg": 850,
+        "form": {
+          "type": "rectangle",
+          "length": 800,
+          "width": 1200,
+          "height": 2200
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 700.0,
+            "y": 4290.84,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "product_name": "Schaltschrank B",
+        "quantity": 1,
+        "weight_kg": 850,
+        "form": {
+          "type": "rectangle",
+          "length": 800,
+          "width": 1200,
+          "height": 2200
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 1400.0,
+            "y": 3823.52,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 4,
+        "product_name": "Fass Kühlmittel",
+        "quantity": 1,
+        "weight_kg": 220,
+        "form": {
+          "type": "cylinder",
+          "height": 950,
+          "radius": 300
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 700.0,
+            "y": 2900.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "product_name": "Stahlrohre 6m",
+        "quantity": 1,
+        "weight_kg": 150,
+        "form": {
+          "type": "cylinder",
+          "height": 6000,
+          "radius": 50
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 2000.0,
+            "y": 200.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "product_name": "Kiste mit Schrauben",
+        "quantity": 1,
+        "weight_kg": 25,
+        "form": {
+          "type": "rectangle",
+          "length": 400,
+          "width": 300,
+          "height": 200
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 2010.0,
+            "y": 946.54,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 7,
+        "product_name": "Montagerahmen",
+        "quantity": 1,
+        "weight_kg": 450,
+        "form": {
+          "type": "rectangle",
+          "length": 3000,
+          "width": 100,
+          "height": 1800
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 2010.0,
+            "y": 1346.54,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 8,
+        "product_name": "Palette mit Filtern",
+        "quantity": 1,
+        "weight_kg": 600,
+        "form": {
+          "type": "rectangle",
+          "length": 1200,
+          "width": 800,
+          "height": 1000
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 0.0,
+            "y": 4300.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 9,
+        "product_name": "Ersatzmotor",
+        "quantity": 1,
+        "weight_kg": 1200,
+        "form": {
+          "type": "rectangle",
+          "length": 900,
+          "width": 700,
+          "height": 800
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 0.0,
+            "y": 4100.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 10,
+        "product_name": "Werkzeugkiste groß",
+        "quantity": 1,
+        "weight_kg": 180,
+        "form": {
+          "type": "rectangle",
+          "length": 1500,
+          "width": 600,
+          "height": 700
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 13.08,
+            "y": 5090.84,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 11,
+        "product_name": "Kabeltrommel",
+        "quantity": 1,
+        "weight_kg": 350,
+        "form": {
+          "type": "cylinder",
+          "height": 800,
+          "radius": 400
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 712.85,
+            "y": 3490.84,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 12,
+        "product_name": "Lüftungseinheit",
+        "quantity": 1,
+        "weight_kg": 730,
+        "form": {
+          "type": "rectangle",
+          "length": 1100,
+          "width": 1100,
+          "height": 1800
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {}
+      },
+      {
+        "id": 13,
+        "product_name": "Sensoren-Set",
+        "quantity": 1,
+        "weight_kg": 5,
+        "form": {
+          "type": "rectangle",
+          "length": 250,
+          "width": 200,
+          "height": 150
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 2000.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 14,
+        "product_name": "Hydraulik-Pumpe",
+        "quantity": 1,
+        "weight_kg": 250,
+        "form": {
+          "type": "rectangle",
+          "length": 700,
+          "width": 500,
+          "height": 600
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 0.0,
+            "y": 2900.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 15,
+        "product_name": "Getriebeöl Kanister",
+        "quantity": 1,
+        "weight_kg": 20,
+        "form": {
+          "type": "rectangle",
+          "length": 300,
+          "width": 250,
+          "height": 400
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 2010.0,
+            "y": 696.54,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 16,
+        "product_name": "Dichtungsringe Box",
+        "quantity": 1,
+        "weight_kg": 15,
+        "form": {
+          "type": "rectangle",
+          "length": 500,
+          "width": 500,
+          "height": 500
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 1460.0,
+            "y": 2500.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 17,
+        "product_name": "Kupferrohr-Bund",
+        "quantity": 1,
+        "weight_kg": 400,
+        "form": {
+          "type": "cylinder",
+          "height": 500,
+          "radius": 700
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {}
+      },
+      {
+        "id": 18,
+        "product_name": "Sicherheitsglas-Platte",
+        "quantity": 1,
+        "weight_kg": 80,
+        "form": {
+          "type": "rectangle",
+          "length": 10,
+          "width": 1200,
+          "height": 2000
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 2000.0,
+            "y": 600.39,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 19,
+        "product_name": "Bürostuhl",
+        "quantity": 1,
+        "weight_kg": 18,
+        "form": {
+          "type": "rectangle",
+          "length": 700,
+          "width": 700,
+          "height": 1100
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 0.0,
+            "y": 3400.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 20,
+        "product_name": "Feuerlöscher",
+        "quantity": 1,
+        "weight_kg": 15,
+        "form": {
+          "type": "cylinder",
+          "height": 600,
+          "radius": 100
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 2091.46,
+            "y": 200.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 21,
+        "product_name": "Palette mit Chemikalien",
+        "quantity": 1,
+        "weight_kg": 800,
+        "form": {
+          "type": "rectangle",
+          "length": 1200,
+          "width": 1000,
+          "height": 1200
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": false
+        },
+        "placement": {}
+      },
+      {
+        "id": 22,
+        "product_name": "Große Rolle Papier",
+        "quantity": 1,
+        "weight_kg": 1100,
+        "form": {
+          "type": "cylinder",
+          "height": 1500,
+          "radius": 600
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {}
+      },
+      {
+        "id": 23,
+        "product_name": "Betonblock",
+        "quantity": 1,
+        "weight_kg": 2500,
+        "form": {
+          "type": "rectangle",
+          "length": 1000,
+          "width": 1000,
+          "height": 1000
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 1200.0,
+            "y": 4500.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 24,
+        "product_name": "Holzbalken 4m",
+        "quantity": 1,
+        "weight_kg": 40,
+        "form": {
+          "type": "rectangle",
+          "length": 4000,
+          "width": 150,
+          "height": 150
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 2110.0,
+            "y": 1346.54,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 25,
+        "product_name": "Gasflasche Propan",
+        "quantity": 1,
+        "weight_kg": 45,
+        "form": {
+          "type": "cylinder",
+          "height": 1300,
+          "radius": 150
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 2000.0,
+            "y": 396.54,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 26,
+        "product_name": "Kiste Äpfel",
+        "quantity": 1,
+        "weight_kg": 18,
+        "form": {
+          "type": "rectangle",
+          "length": 600,
+          "width": 400,
+          "height": 300
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 860.0,
+            "y": 2500.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 27,
+        "product_name": "Reifenstapel",
+        "quantity": 1,
+        "weight_kg": 90,
+        "form": {
+          "type": "cylinder",
+          "height": 1200,
+          "radius": 350
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 1282.46,
+            "y": 3000.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 28,
+        "product_name": "Kleine Kiste Werkzeug",
+        "quantity": 1,
+        "weight_kg": 30,
+        "form": {
+          "type": "rectangle",
+          "length": 500,
+          "width": 400,
+          "height": 350
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {
+          "position": {
+            "x": 0.0,
+            "y": 2500.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 90
+          }
+        }
+      },
+      {
+        "id": 29,
+        "product_name": "Teppichrolle 2m",
+        "quantity": 1,
+        "weight_kg": 60,
+        "form": {
+          "type": "cylinder",
+          "height": 2000,
+          "radius": 180
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": false
+        },
+        "placement": {
+          "position": {
+            "x": 500.0,
+            "y": 2500.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x_axis": 0,
+            "y_axis": 0,
+            "z_axis": 0
+          }
+        }
+      },
+      {
+        "id": 30,
+        "product_name": "Industriepalette Leer",
+        "quantity": 1,
+        "weight_kg": 25,
+        "form": {
+          "type": "rectangle",
+          "length": 1200,
+          "width": 1000,
+          "height": 150
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true
+        },
+        "placement": {}
+      }
+    ],
+    "loading_plan": {
+      "containers": [
+        {
+          "sequence": 1,
+          "instance_id": "",
+          "container_id": "",
+          "type": "",
+          "total_weight_kg": 7611.0,
+          "efficiency_percent": null,
+          "placed_objects": [
+            {
+              "id": 1,
+              "instance_id": "1_1",
+              "stack_level": 0,
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 5,
+              "instance_id": "5_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2000.0,
+                "y": 200.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 13,
+              "instance_id": "13_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2000.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            },
+            {
+              "id": 20,
+              "instance_id": "20_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2091.46,
+                "y": 200.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 25,
+              "instance_id": "25_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2000.0,
+                "y": 396.54,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 18,
+              "instance_id": "18_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2000.0,
+                "y": 600.39,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            },
+            {
+              "id": 15,
+              "instance_id": "15_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2010.0,
+                "y": 696.54,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            },
+            {
+              "id": 6,
+              "instance_id": "6_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2010.0,
+                "y": 946.54,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 29,
+              "instance_id": "29_1",
+              "stack_level": 0,
+              "position": {
+                "x": 500.0,
+                "y": 2500.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 28,
+              "instance_id": "28_1",
+              "stack_level": 0,
+              "position": {
+                "x": 0.0,
+                "y": 2500.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            },
+            {
+              "id": 26,
+              "instance_id": "26_1",
+              "stack_level": 0,
+              "position": {
+                "x": 860.0,
+                "y": 2500.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            },
+            {
+              "id": 16,
+              "instance_id": "16_1",
+              "stack_level": 0,
+              "position": {
+                "x": 1460.0,
+                "y": 2500.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 7,
+              "instance_id": "7_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2010.0,
+                "y": 1346.54,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 14,
+              "instance_id": "14_1",
+              "stack_level": 0,
+              "position": {
+                "x": 0.0,
+                "y": 2900.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            },
+            {
+              "id": 4,
+              "instance_id": "4_1",
+              "stack_level": 0,
+              "position": {
+                "x": 700.0,
+                "y": 2900.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 24,
+              "instance_id": "24_1",
+              "stack_level": 0,
+              "position": {
+                "x": 2110.0,
+                "y": 1346.54,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 27,
+              "instance_id": "27_1",
+              "stack_level": 0,
+              "position": {
+                "x": 1282.46,
+                "y": 3000.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 19,
+              "instance_id": "19_1",
+              "stack_level": 0,
+              "position": {
+                "x": 0.0,
+                "y": 3400.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 11,
+              "instance_id": "11_1",
+              "stack_level": 0,
+              "position": {
+                "x": 712.85,
+                "y": 3490.84,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 9,
+              "instance_id": "9_1",
+              "stack_level": 0,
+              "position": {
+                "x": 0.0,
+                "y": 4100.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 2,
+              "instance_id": "2_1",
+              "stack_level": 0,
+              "position": {
+                "x": 700.0,
+                "y": 4290.84,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 0
+              }
+            },
+            {
+              "id": 10,
+              "instance_id": "10_1",
+              "stack_level": 0,
+              "position": {
+                "x": 13.08,
+                "y": 5090.84,
+                "z": 0.0
+              },
+              "rotation": {
+                "x_axis": 0,
+                "y_axis": 0,
+                "z_axis": 90
+              }
+            }
+          ]
+        },
+        {
+          "sequence": 2,
+          "instance_id": "",
+          "container_id": "",
+          "type": "",
+          "total_weight_kg": null,
+          "efficiency_percent": null,
+          "placed_objects": []
+        }
+      ]
+    }
+  }
+}
