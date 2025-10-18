@@ -80,18 +80,18 @@
           "total_weight_kg": 12110,
           "efficiency_percent": 88.5,
           "placed_objects": [
-            { "id": 5, "stack_level": 1, "position": { "x": 0, "y": 2600, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }},
-            { "id": 4, "stack_level": 1, "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }},
-            { "id": 8, "stack_level": 1, "position": { "x": 0, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 9, "stack_level": 1, "position": { "x": 800, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 2, "stack_level": 1, "position": { "x": 0, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 3, "stack_level": 1, "position": { "x": 1200, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 1, "stack_level": 1, "position": { "x": 165, "y": 9498, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 7, "stack_level": 1, "position": { "x": 2230, "y": 2600, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 10, "stack_level": 2, "position": { "x": 800, "y": 1400, "z": 800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 12, "stack_level": 2, "position": { "x": 0, "y": 2300, "z": 1000 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 6, "stack_level": 2, "position": { "x": 1500, "y": 0, "z": 1500 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 11, "stack_level": 1, "position": { "x": 1500, "y": 1400, "z": 0 }, "rotation": { "x_axis": "height", "y_axis": "radius", "z_axis": "radius" }}
+            { "id": 5, "stack_level": 0, "position": { "x": 0, "y": 2600, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }},
+            { "id": 4, "stack_level": 0, "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }},
+            { "id": 8, "stack_level": 0, "position": { "x": 0, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 9, "stack_level": 0, "position": { "x": 800, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 2, "stack_level": 0, "position": { "x": 0, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 3, "stack_level": 0, "position": { "x": 1200, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 1, "stack_level": 0, "position": { "x": 165, "y": 9498, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 7, "stack_level": 0, "position": { "x": 2230, "y": 2600, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 10, "stack_level": 5, "position": { "x": 800, "y": 1400, "z": 800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 12, "stack_level": 4, "position": { "x": 0, "y": 2300, "z": 1000 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 6, "stack_level": 10, "position": { "x": 1500, "y": 0, "z": 1500 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 11, "stack_level": 3, "position": { "x": 1500, "y": 1400, "z": 0 }, "rotation": { "x_axis": "height", "y_axis": "radius", "z_axis": "radius" }}
           ] 
         },
         {
@@ -102,14 +102,14 @@
           "total_weight_kg": 3417,
           "efficiency_percent": 75.2,
           "placed_objects": [
-            { "id": 13, "stack_level": 1, "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 15, "stack_level": 1, "position": { "x": 0, "y": 1000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 19, "stack_level": 1, "position": { "x": 0, "y": 2000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 14, "stack_level": 1, "position": { "x": 1000, "y": 4867, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
-            { "id": 17, "stack_level": 1, "position": { "x": 1500, "y": 4467, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }},
-            { "id": 20, "stack_level": 1, "position": { "x": 1800, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }},
-            { "id": 18, "stack_level": 1, "position": { "x": 2230, "y": 0, "z": 0 }, "rotation": { "x_axis": "length", "y_axis": "width", "z_axis": "height" }},
-            { "id": 16, "stack_level": 2, "position": { "x": 0, "y": 0, "z": 1800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}
+            { "id": 13, "stack_level": 0, "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 15, "stack_level": 0, "position": { "x": 0, "y": 1000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 19, "stack_level": 0, "position": { "x": 0, "y": 2000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 14, "stack_level": 0, "position": { "x": 1000, "y": 4867, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 17, "stack_level": 0, "position": { "x": 1500, "y": 4467, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }},
+            { "id": 20, "stack_level": 0, "position": { "x": 1800, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }},
+            { "id": 18, "stack_level": 0, "position": { "x": 2230, "y": 0, "z": 0 }, "rotation": { "x_axis": "length", "y_axis": "width", "z_axis": "height" }},
+            { "id": 16, "stack_level": 13, "position": { "x": 0, "y": 0, "z": 1800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}
           ]
         }
       ]
