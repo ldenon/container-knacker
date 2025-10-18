@@ -33,4 +33,19 @@ print("Number of stacks", len(stack_object_list))
 # convert stack to json
 parser.create_object_list_from_stacks(stack_object_list)
 # print the created objects from stack
-print("Created objects from stack:")
+
+
+
+
+
+
+path = os.path.dirname(__file__)
+placed_file_path = os.path.join(path, "placed.json")
+# print("Reading placed data from", placed_file_path)
+placed_data = parser.read_placed_json_data(placed_file_path)
+# print("Placed data objects:")
+# placement_map = {d['name']: d['placement'] for d in placed_data}
+
+# for d in placed_data:
+    # print(d["name"])    
+parser.create_stack_result_json(aggregated_stack_positions=placed_data, stacks_list=stack)
