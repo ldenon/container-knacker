@@ -565,24 +565,30 @@ def plot_final_solution(config, params, type_desc, output_filename="final_packin
     plt.savefig(output_filename, dpi=150); plt.close(fig)
     print("PNG-Datei gespeichert.")
 
-def update_and_save_order_json(original_order_data, final_solution_numpy, id_map, final_total_weight, output_filename):
-    """Füllt die berechneten Daten zurück in die JSON-Struktur."""
+def update_and_save_order_json(original_data_root, final_solution_numpy, id_map, final_total_weight, output_filename):
+    """
+    Füllt die berechneten Daten (Positionen) zurück in die
+    ursprüngliche JSON-Struktur (neues Format) und speichert sie.
+    """
     print(f"Aktualisiere Bestelldaten und speichere sie zurück nach '{output_filename}'...")
 
-    loading_plan_objects = []
-    item_instance_counter = {}
+    # 1. Erstelle eine Map der berechneten Platzierungen
+    # Map: { original_json_id (name): { "position": {...}, "rotation": {...} } }
+    placement_map = {}
+    item_instance_counter = {} # Brauchen wir theoretisch nicht mehr, da quantity=1
 
     for i in range(final_solution_numpy.shape[0]):
         item = final_solution_numpy[i]
         seq_type_id = int(item[IDX_TYPE_ID])
-        original_json_id = id_map.get(seq_type_id, -1) # Sichere Abfrage
-        if original_json_id == -1:
-            print(f"WARNUNG: Konnte Original-ID für seq_type_id {seq_type_id} nicht finden.")
+        original_json_id = id_map.get(seq_type_id) # Sollte der 'name' sein
+        if not original_json_id:
+            print(f"WARNUNG: Konnte Original-ID (Name) für seq_type_id {seq_type_id} nicht finden.")
             continue
 
+        # Da quantity=1, brauchen wir keine instance_id mehr, aber behalten die Zählung für Konsistenz
         instance_count = item_instance_counter.get(original_json_id, 0) + 1
         item_instance_counter[original_json_id] = instance_count
-        instance_id = f"{original_json_id}_{instance_count}"
+        # instance_id = f"{original_json_id}_{instance_count}" # Nicht mehr benötigt im Export
 
         pos_dict = {
             "x": round(item[IDX_X] - item[IDX_W]/2, 2), # Bottom-Left X
@@ -592,54 +598,44 @@ def update_and_save_order_json(original_order_data, final_solution_numpy, id_map
         is_rotated = (item[IDX_GEOM_TYPE] == GEOM_RECT) and (item[IDX_W] != item[IDX_W_ORIG])
         rot_dict = {"x_axis": 0, "y_axis": 0, "z_axis": 90 if is_rotated else 0}
 
-        loading_plan_objects.append({
-            "id": original_json_id, "instance_id": instance_id,
-            "stack_level": 0, "position": pos_dict, "rotation": rot_dict
-        })
+        placement_map[original_json_id] = {
+             # "id": original_json_id, # Redundant, da Key
+             # "instance_id": instance_id, # Nicht im neuen Format
+             "stack_level": 0, # Immer 0 in 2D
+             "position": pos_dict,
+             "rotation": rot_dict
+         }
 
-    # Erstelle eine Map der *ersten* Platzierung pro Original-ID
-    first_placement_map = {}
-    for plan_item in loading_plan_objects:
-        orig_id = plan_item["id"]
-        if orig_id not in first_placement_map:
-             first_placement_map[orig_id] = {
-                 "position": plan_item["position"],
-                 "rotation": plan_item["rotation"]
-             }
+    # 2. Iteriere durch die *originale* Objektliste und füge Platzierung hinzu
+    objects_updated_count = 0
+    if "objects" in original_data_root and isinstance(original_data_root["objects"], list):
+        for obj in original_data_root["objects"]:
+            obj_name = obj.get("name")
+            if obj_name in placement_map:
+                # Füge das 'placement'-Dictionary hinzu oder aktualisiere es
+                obj["placement"] = placement_map[obj_name]
+                objects_updated_count += 1
+            else:
+                 # Optional: Füge leeres Placement hinzu, wenn Objekt nicht platziert wurde
+                 if "placement" not in obj:
+                     obj["placement"] = {} # Oder setze auf null/default?
 
-    # Aktualisiere 'placement' in der originalen 'objects'-Liste
-    # (Dies ist optional, aber gut für Konsistenz)
-    for obj in original_order_data.get("objects", []):
-        obj_id = obj.get("id")
-        if obj_id in first_placement_map:
-            if "placement" not in obj or not isinstance(obj["placement"], dict):
-                 obj["placement"] = {} # Erstelle, falls nicht vorhanden
-            obj["placement"]["position"] = first_placement_map[obj_id]["position"]
-            obj["placement"]["rotation"] = first_placement_map[obj_id]["rotation"]
-            # TODO: Container-Typ/ID hier setzen, falls nötig
+    print(f"{objects_updated_count} von {len(placement_map)} platzierten Objekten in Original-JSON gefunden und aktualisiert.")
 
-    # Aktualisiere den 'loading_plan'
+    # 3. Optional: Füge Gesamtgewicht zum Container hinzu
+    if "container" in original_data_root:
+        original_data_root["container"]["calculated_total_weight_kg"] = round(final_total_weight, 2)
+        # TODO: Effizienz berechnen?
+        # original_data_root["container"]["calculated_efficiency_percent"] = ...
+
+    # 4. Speichere die *gesamte* modifizierte Root-Struktur
     try:
-        # TODO: Logik für *mehrere* Container implementieren
-        plan_container = original_order_data["loading_plan"]["containers"][0]
-        plan_container["placed_objects"] = loading_plan_objects
-        plan_container["total_weight_kg"] = round(final_total_weight, 2)
-        # TODO: Effizienz berechnen
-        plan_container["efficiency_percent"] = None # Placeholder
-
-    except (IndexError, KeyError, TypeError):
-        print("WARNUNG: 'loading_plan' Struktur im JSON ungültig/fehlt. Überspringe Update.")
-
-    # Speichere die *gesamte* modifizierte Struktur
-    try:
-        output_full_json = {"order": original_order_data}
+        # Kein {"order": ...} Wrapper mehr nötig
         with open(output_filename, 'w', encoding='utf-8') as f:
-            json.dump(output_full_json, f, indent=2, ensure_ascii=False)
+            json.dump(original_data_root, f, indent=4, ensure_ascii=False) # indent=4 für Lesbarkeit
         print(f"JSON-Datei ('{os.path.basename(output_filename)}') erfolgreich mit Platzierungen aktualisiert.")
     except Exception as e:
         print(f"FEHLER beim Speichern der finalen JSON-Datei: {e}")
-
-
 # -------------------- HAUPTPROGRAMM (Headless) --------------------
 if __name__ == "__main__":
 
@@ -650,14 +646,15 @@ if __name__ == "__main__":
     except NameError: SCRIPT_DIR = os.getcwd()
 
     # --- SCHRITT 1: PARSEN ---
-    INPUT_JSON_FILEPATH = os.path.join(SCRIPT_DIR, "meine_bestellung.json")
+    # Verwende den neuen Dateinamen für das neue Format
+    INPUT_JSON_FILEPATH = os.path.join(SCRIPT_DIR, "meine_Bestellung.json") # <<< NEUER DATEINAME VORSCHLAG
     try:
         print(f"Lade Bestelldaten aus: {INPUT_JSON_FILEPATH}")
         parser = OrderParser(INPUT_JSON_FILEPATH)
     except Exception as e:
         print(f"Kritischer Fehler beim Starten des Parsers: {e}"); exit()
 
-    # Hole Container-Maße UND Maximalgewicht (automatische Auswahl)
+    # Hole Container-Maße UND Maximalgewicht
     container_info = parser.get_container_dimensions()
     if not container_info:
         print("Konnte Container-Dimensionen/Gewicht nicht laden. Abbruch."); exit()
@@ -666,20 +663,22 @@ if __name__ == "__main__":
     object_definitions = parser.get_object_definitions()
     if not object_definitions:
         print("Keine gültigen Objekte zum Packen gefunden. Abbruch."); exit()
-    original_json_data = parser.get_original_order_data()
+
+    # Hole die Original-JSON-Struktur (jetzt das Root-Objekt)
+    original_json_data_root = parser.get_raw_data() # <<< NEUER NAME DER GETTER-FUNKTION
 
     # --- SCHRITT 2: PARAMETER ERSTELLEN ---
     parameters = {
         "NUM_SA_RUNS": num_cpus * 2, "RANDOM_SEED": 1,
         "AREA_W": AREA_W, "AREA_H": AREA_H,
         "INITIAL_TEMP": 1.0, "COOLING_RATE": 0.9997,
-        "ITER_LIMIT": 200000, # Ggf. erhöhen für bessere Ergebnisse
+        "ITER_LIMIT": 100000, # Ggf. erhöhen
         "SWAP_PROBABILITY": 0.20, "TELEPORT_PROBABILITY": 0.15,
-        "ROTATE_PROBABILITY": 0.10, "MAX_MOVE_MULTIPLIER": 6.0, # Etwas aggressiver
-        "WEIGHT_Y": 2.0, "WEIGHT_X": 0.2,        # Kosten-Balancing
-        "WEIGHT_BOX_AREA": 1000.0,                 # Dichte-Bestrafung
-        "WEIGHT_GROUPING": 0.2,                  # Gruppierung
-        "MAX_PLACEMENT_TRIES": 5000,
+        "ROTATE_PROBABILITY": 0.10, "MAX_MOVE_MULTIPLIER": 8.0,
+        "WEIGHT_Y": 1.0, "WEIGHT_X": 1.0,
+        "WEIGHT_BOX_AREA": 500.0,
+        "WEIGHT_GROUPING": 0.5,
+        "MAX_PLACEMENT_TRIES": 3000,
     }
 
     # --- SCHRITT 3: BERECHNUNG STARTEN ---
@@ -694,26 +693,27 @@ if __name__ == "__main__":
         final_solution, final_weight = result # Entpacke Ergebnis
 
         if final_solution is not None and final_solution.shape[0] > 0:
-            # Stelle sicher, dass type_id_to_original_id_map in der Engine existiert
             if hasattr(engine, 'type_id_to_original_id_map'):
-                
+
                 png_filename = os.path.join(SCRIPT_DIR, "final_packing_plan.png")
+                # Übergebe die korrekte Map für die Beschreibung im Plot
                 plot_final_solution(
                     final_solution, parameters, engine.pallet_types_desc,
                     output_filename=png_filename
                 )
 
-                # Speichere zurück in die Originaldatei
-                json_output_filename = INPUT_JSON_FILEPATH
+             # --- Export in separate Datei ---
+                json_output_filename = os.path.join(SCRIPT_DIR, "placed.json") # <<< DATEINAME ANPASSEN
+                # Verwende die Root-Daten für den Export
                 update_and_save_order_json(
-                    original_json_data, final_solution,
-                    engine.type_id_to_original_id_map, # ID-Map übergeben
+                    original_json_data_root, # <<< ÜBERGEBE ROOT-DATEN
+                    final_solution,
+                    engine.type_id_to_original_id_map,
                     final_weight,
                     output_filename=json_output_filename
                 )
             else:
-                 print("FEHLER: ID-Mapping ('type_id_to_original_id_map') fehlt in der Engine. JSON-Export nicht möglich.")
-
+                 print("FEHLER: ID-Mapping fehlt in der Engine. JSON-Export nicht möglich.")
         else:
             print("Keine Lösung gefunden (möglicherweise passt nichts oder ist zu schwer).")
     else:

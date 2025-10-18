@@ -1,0 +1,225 @@
+{
+    "container": {
+        "height": 2350,
+        "width": 2330,
+        "length": 5867,
+        "max_weight": 28200
+    },
+    "objects": [
+        {
+            "name": "Stapel_1",
+            "form": "Zylinder",
+            "hoehe": 6000,
+            "gewicht_kg": 150,
+            "grundflaeche": 7853.981633974483,
+            "abmessungen": {
+                "radius": 50
+            }
+        },
+        {
+            "name": "Stapel_2",
+            "form": "Quader",
+            "hoehe": 2000,
+            "gewicht_kg": 80,
+            "grundflaeche": 12000,
+            "abmessungen": {
+                "laenge": 10,
+                "breite": 1200
+            }
+        },
+        {
+            "name": "Stapel_3",
+            "form": "Quader",
+            "hoehe": 150,
+            "gewicht_kg": 5,
+            "grundflaeche": 50000,
+            "abmessungen": {
+                "laenge": 250,
+                "breite": 200
+            }
+        },
+        {
+            "name": "Stapel_4",
+            "form": "Zylinder",
+            "hoehe": 600,
+            "gewicht_kg": 15,
+            "grundflaeche": 31415.926535897932,
+            "abmessungen": {
+                "radius": 100
+            }
+        },
+        {
+            "name": "Stapel_5",
+            "form": "Quader",
+            "hoehe": 400,
+            "gewicht_kg": 20,
+            "grundflaeche": 75000,
+            "abmessungen": {
+                "laenge": 300,
+                "breite": 250
+            }
+        },
+        {
+            "name": "Stapel_6",
+            "form": "Quader",
+            "hoehe": 200,
+            "gewicht_kg": 25,
+            "grundflaeche": 120000,
+            "abmessungen": {
+                "laenge": 400,
+                "breite": 300
+            }
+        },
+        {
+            "name": "Stapel_7",
+            "form": "Quader",
+            "hoehe": 500,
+            "gewicht_kg": 15,
+            "grundflaeche": 250000,
+            "abmessungen": {
+                "laenge": 500,
+                "breite": 500
+            }
+        },
+        {
+            "name": "Stapel_8",
+            "form": "Quader",
+            "hoehe": 600,
+            "gewicht_kg": 250,
+            "grundflaeche": 350000,
+            "abmessungen": {
+                "laenge": 700,
+                "breite": 500
+            }
+        },
+        {
+            "name": "Stapel_9",
+            "form": "Zylinder",
+            "hoehe": 950,
+            "gewicht_kg": 220,
+            "grundflaeche": 282743.3388230814,
+            "abmessungen": {
+                "radius": 300
+            }
+        },
+        {
+            "name": "Stapel_10",
+            "form": "Zylinder",
+            "hoehe": 800,
+            "gewicht_kg": 350,
+            "grundflaeche": 502654.8245743669,
+            "abmessungen": {
+                "radius": 400
+            }
+        },
+        {
+            "name": "Stapel_11",
+            "form": "Quader",
+            "hoehe": 800,
+            "gewicht_kg": 1200,
+            "grundflaeche": 630000,
+            "abmessungen": {
+                "laenge": 900,
+                "breite": 700
+            }
+        },
+        {
+            "name": "Stapel_12",
+            "form": "Quader",
+            "hoehe": 1100,
+            "gewicht_kg": 18,
+            "grundflaeche": 490000,
+            "abmessungen": {
+                "laenge": 700,
+                "breite": 700
+            }
+        },
+        {
+            "name": "Stapel_13",
+            "form": "Quader",
+            "hoehe": 2200,
+            "gewicht_kg": 850,
+            "grundflaeche": 960000,
+            "abmessungen": {
+                "laenge": 800,
+                "breite": 1200
+            }
+        },
+        {
+            "name": "Stapel_14",
+            "form": "Quader",
+            "hoehe": 700,
+            "gewicht_kg": 180,
+            "grundflaeche": 900000,
+            "abmessungen": {
+                "laenge": 1500,
+                "breite": 600
+            }
+        },
+        {
+            "name": "Stapel_15",
+            "form": "Quader",
+            "hoehe": 1500,
+            "gewicht_kg": 3500,
+            "grundflaeche": 5000000,
+            "abmessungen": {
+                "laenge": 2500,
+                "breite": 2000
+            }
+        },
+        {
+            "name": "Stapel_16",
+            "form": "Quader",
+            "hoehe": 1800,
+            "gewicht_kg": 730,
+            "grundflaeche": 1210000,
+            "abmessungen": {
+                "laenge": 1100,
+                "breite": 1100
+            }
+        },
+        {
+            "name": "Stapel_17",
+            "form": "Quader",
+            "hoehe": 2200,
+            "gewicht_kg": 850,
+            "grundflaeche": 960000,
+            "abmessungen": {
+                "laenge": 800,
+                "breite": 1200
+            }
+        },
+        {
+            "name": "Stapel_18",
+            "form": "Zylinder",
+            "hoehe": 500,
+            "gewicht_kg": 400,
+            "grundflaeche": 1539380.4002589986,
+            "abmessungen": {
+                "radius": 700
+            }
+        },
+        {
+            "name": "Stapel_19",
+            "form": "Quader",
+            "hoehe": 1000,
+            "gewicht_kg": 600,
+            "grundflaeche": 960000,
+            "abmessungen": {
+                "laenge": 1200,
+                "breite": 800
+            }
+        },
+        {
+            "name": "Stapel_20",
+            "form": "Quader",
+            "hoehe": 1800,
+            "gewicht_kg": 450,
+            "grundflaeche": 300000,
+            "abmessungen": {
+                "laenge": 3000,
+                "breite": 100
+            }
+        }
+    ]
+}
