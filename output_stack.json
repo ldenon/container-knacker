@@ -148,28 +148,6 @@
         {
             "name": "Stapel_14",
             "form": "Quader",
-            "hoehe": 700,
-            "gewicht_kg": 180,
-            "grundflaeche": 900000,
-            "abmessungen": {
-                "laenge": 1500,
-                "breite": 600
-            }
-        },
-        {
-            "name": "Stapel_15",
-            "form": "Quader",
-            "hoehe": 1500,
-            "gewicht_kg": 3500,
-            "grundflaeche": 5000000,
-            "abmessungen": {
-                "laenge": 2500,
-                "breite": 2000
-            }
-        },
-        {
-            "name": "Stapel_16",
-            "form": "Quader",
             "hoehe": 1800,
             "gewicht_kg": 730,
             "grundflaeche": 1210000,
@@ -179,7 +157,18 @@
             }
         },
         {
-            "name": "Stapel_17",
+            "name": "Stapel_15",
+            "form": "Quader",
+            "hoehe": 1000,
+            "gewicht_kg": 600,
+            "grundflaeche": 960000,
+            "abmessungen": {
+                "laenge": 1200,
+                "breite": 800
+            }
+        },
+        {
+            "name": "Stapel_16",
             "form": "Quader",
             "hoehe": 2200,
             "gewicht_kg": 850,
@@ -187,6 +176,17 @@
             "abmessungen": {
                 "laenge": 800,
                 "breite": 1200
+            }
+        },
+        {
+            "name": "Stapel_17",
+            "form": "Quader",
+            "hoehe": 1500,
+            "gewicht_kg": 3500,
+            "grundflaeche": 5000000,
+            "abmessungen": {
+                "laenge": 2500,
+                "breite": 2000
             }
         },
         {
@@ -202,23 +202,23 @@
         {
             "name": "Stapel_19",
             "form": "Quader",
-            "hoehe": 1000,
-            "gewicht_kg": 600,
-            "grundflaeche": 960000,
-            "abmessungen": {
-                "laenge": 1200,
-                "breite": 800
-            }
-        },
-        {
-            "name": "Stapel_20",
-            "form": "Quader",
             "hoehe": 1800,
             "gewicht_kg": 450,
             "grundflaeche": 300000,
             "abmessungen": {
                 "laenge": 3000,
                 "breite": 100
+            }
+        },
+        {
+            "name": "Stapel_20",
+            "form": "Quader",
+            "hoehe": 700,
+            "gewicht_kg": 180,
+            "grundflaeche": 900000,
+            "abmessungen": {
+                "laenge": 1500,
+                "breite": 600
             }
         }
     ]

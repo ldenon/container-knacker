@@ -1,6 +1,9 @@
+from ast import List
 import networkx as nx
 import math
 import time
+
+from pyparsing import Dict
 from three_dimensional import Objekt
 # Konstanten für die Beschränkung
 TOP_K_BASEN = 12
@@ -192,8 +195,6 @@ class StapelOptimierer:
 
         return fertige_stapel, gesamt_grundflaeche            
 
-
-
     def stapel_zu_objekten_aggregieren(self, fertige_stapel):
         """
         Aggregiert die gefundenen Stapel zu neuen, virtuellen Objekt-Instanzen.
@@ -272,6 +273,11 @@ class StapelOptimierer:
         return neue_objekte
 
 
+
+# Fügen Sie die Hilfsmethode in die JSONParser Klasse im json_parser.py Codeblock ein.
+
+# Und passen Sie die Klasse `JSONParser` mit der neuen Methode an:
+# (Die Klasse ist bereits in den Codeblöcken enthalten, hier ist nur die Implementierung)
 
 if __name__ == "__main__":
     # Beispielobjekte
