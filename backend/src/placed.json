@@ -19,12 +19,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 50.0,
-                    "y": 2050.0,
+                    "x": 0.0,
+                    "y": 2000.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "radius": 50.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -41,13 +43,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 680.0,
-                    "y": 2005.0,
+                    "x": 80.0,
+                    "y": 2000.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 1200.0,
-                    "length": 10.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -64,13 +67,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 412.48,
-                    "y": 2110.0,
+                    "x": 287.48,
+                    "y": 2010.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 250.0,
-                    "length": 200.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -86,12 +90,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 187.48,
-                    "y": 2110.0,
+                    "x": 87.48,
+                    "y": 2010.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "radius": 100.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -108,13 +114,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 150.0,
-                    "y": 2635.0,
+                    "x": 0.0,
+                    "y": 2510.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 300.0,
-                    "length": 250.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -131,13 +138,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 200.0,
-                    "y": 2360.0,
+                    "x": 0.0,
+                    "y": 2210.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 400.0,
-                    "length": 300.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -154,13 +162,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1087.36,
-                    "y": 2260.0,
+                    "x": 837.46,
+                    "y": 2010.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 500.0,
-                    "length": 500.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -177,13 +186,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1687.36,
-                    "y": 2250.0,
+                    "x": 1337.46,
+                    "y": 2000.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 700.0,
-                    "length": 500.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -199,12 +209,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 618.68,
-                    "y": 2715.37,
+                    "x": 318.73,
+                    "y": 2415.32,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "radius": 300.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -220,12 +232,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1300.0,
-                    "y": 3610.0,
+                    "x": 900.0,
+                    "y": 3210.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "radius": 400.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -242,13 +256,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 450.0,
-                    "y": 3365.37,
+                    "x": 0.0,
+                    "y": 3015.32,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 900.0,
-                    "length": 700.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -265,13 +280,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1268.68,
-                    "y": 2860.0,
+                    "x": 918.73,
+                    "y": 2510.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 700.0,
-                    "length": 700.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -285,18 +301,7 @@
                 "laenge": 800,
                 "breite": 1200
             },
-            "placement": {
-                "stack_level": 0,
-                "position": {
-                    "x": 1200.0,
-                    "y": 5210.0,
-                    "z": 0.0
-                },
-                "dimensions": {
-                    "width": 1200.0,
-                    "length": 800.0
-                }
-            }
+            "placement": {}
         },
         {
             "name": "Stapel_14",
@@ -311,13 +316,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 300.0,
-                    "y": 4465.37,
+                    "x": 0.0,
+                    "y": 3715.32,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 600.0,
-                    "length": 1500.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         },
@@ -334,13 +340,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1080.0,
-                    "y": 1000.0,
+                    "x": -170.0,
+                    "y": 0.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 2500.0,
-                    "length": 2000.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -366,7 +373,19 @@
                 "laenge": 800,
                 "breite": 1200
             },
-            "placement": {}
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 600.0,
+                    "y": 4810.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
         },
         {
             "name": "Stapel_18",
@@ -392,13 +411,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1200.0,
-                    "y": 4410.0,
+                    "x": 600.0,
+                    "y": 4010.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 1200.0,
-                    "length": 800.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 90
                 }
             }
         },
@@ -415,13 +435,14 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 2087.36,
-                    "y": 3500.0,
+                    "x": 2037.46,
+                    "y": 2000.0,
                     "z": 0.0
                 },
-                "dimensions": {
-                    "width": 100.0,
-                    "length": 3000.0
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
                 }
             }
         }

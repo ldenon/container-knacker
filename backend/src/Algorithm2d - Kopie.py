@@ -565,80 +565,75 @@ def plot_final_solution(config, params, type_desc, output_filename="final_packin
     plt.savefig(output_filename, dpi=150); plt.close(fig)
     print("PNG-Datei gespeichert.")
 
-# --- EXPORT-FUNKTION (Mit Zentrumskoordinaten im Output) ---
 def update_and_save_order_json(original_data_root, final_solution_numpy, id_map, final_total_weight, output_filename):
     """
-    Füllt die berechneten Daten (Positionen als ZENTRUM und Dimensionen)
-    zurück in die JSON-Struktur und speichert sie.
-    Das 'rotation'-Feld wird entfernt.
+    Füllt die berechneten Daten (Positionen) zurück in die
+    ursprüngliche JSON-Struktur (neues Format) und speichert sie.
     """
     print(f"Aktualisiere Bestelldaten und speichere sie zurück nach '{output_filename}'...")
 
-    placement_map = {} # Map: { original_json_id (name): { placement_dict } }
-    item_instance_counter = {}
+    # 1. Erstelle eine Map der berechneten Platzierungen
+    # Map: { original_json_id (name): { "position": {...}, "rotation": {...} } }
+    placement_map = {}
+    item_instance_counter = {} # Brauchen wir theoretisch nicht mehr, da quantity=1
 
     for i in range(final_solution_numpy.shape[0]):
         item = final_solution_numpy[i]
         seq_type_id = int(item[IDX_TYPE_ID])
-        original_json_id = id_map.get(seq_type_id)
+        original_json_id = id_map.get(seq_type_id) # Sollte der 'name' sein
         if not original_json_id:
             print(f"WARNUNG: Konnte Original-ID (Name) für seq_type_id {seq_type_id} nicht finden.")
             continue
 
+        # Da quantity=1, brauchen wir keine instance_id mehr, aber behalten die Zählung für Konsistenz
         instance_count = item_instance_counter.get(original_json_id, 0) + 1
         item_instance_counter[original_json_id] = instance_count
+        # instance_id = f"{original_json_id}_{instance_count}" # Nicht mehr benötigt im Export
 
-        # --- KORREKTUR: Verwende Zentrumskoordinaten direkt ---
         pos_dict = {
-            "x": round(item[IDX_X], 2), # Verwende direkt IDX_X (Zentrum)
-            "y": round(item[IDX_Y], 2), # Verwende direkt IDX_Y (Zentrum)
+            "x": round(item[IDX_X] - item[IDX_W]/2, 2), # Bottom-Left X
+            "y": round(item[IDX_Y] - item[IDX_H]/2, 2), # Bottom-Left Y
             "z": 0.0
         }
-        # --- ENDE KORREKTUR ---
+        is_rotated = (item[IDX_GEOM_TYPE] == GEOM_RECT) and (item[IDX_W] != item[IDX_W_ORIG])
+        rot_dict = {"x_axis": 0, "y_axis": 0, "z_axis": 90 if is_rotated else 0}
 
-        # Dimensionen (repräsentieren die Rotation implizit)
-        dimensions_dict = {}
-        if item[IDX_GEOM_TYPE] == GEOM_RECT:
-            dimensions_dict = {
-                "width": round(item[IDX_W], 2),
-                "length": round(item[IDX_H], 2)
-            }
-        elif item[IDX_GEOM_TYPE] == GEOM_CIRCLE:
-            dimensions_dict = {
-                "radius": round(item[IDX_RADIUS], 2)
-            }
-
-        # Füge Dimensionen zum Placement hinzu
         placement_map[original_json_id] = {
-             "stack_level": 0,
+             # "id": original_json_id, # Redundant, da Key
+             # "instance_id": instance_id, # Nicht im neuen Format
+             "stack_level": 0, # Immer 0 in 2D
              "position": pos_dict,
-             # "rotation": rot_dict, # Entfernt
-             "dimensions": dimensions_dict
+             "rotation": rot_dict
          }
 
-    # Aktualisiere die *originale* Objektliste im JSON
+    # 2. Iteriere durch die *originale* Objektliste und füge Platzierung hinzu
     objects_updated_count = 0
     if "objects" in original_data_root and isinstance(original_data_root["objects"], list):
         for obj in original_data_root["objects"]:
             obj_name = obj.get("name")
             if obj_name in placement_map:
+                # Füge das 'placement'-Dictionary hinzu oder aktualisiere es
                 obj["placement"] = placement_map[obj_name]
                 objects_updated_count += 1
             else:
+                 # Optional: Füge leeres Placement hinzu, wenn Objekt nicht platziert wurde
                  if "placement" not in obj:
-                     obj["placement"] = {} # Optional: Leeres Placement
+                     obj["placement"] = {} # Oder setze auf null/default?
 
     print(f"{objects_updated_count} von {len(placement_map)} platzierten Objekten in Original-JSON gefunden und aktualisiert.")
 
-    # Optional: Füge Gesamtgewicht zum Container hinzu
+    # 3. Optional: Füge Gesamtgewicht zum Container hinzu
     if "container" in original_data_root:
         original_data_root["container"]["calculated_total_weight_kg"] = round(final_total_weight, 2)
+        # TODO: Effizienz berechnen?
+        # original_data_root["container"]["calculated_efficiency_percent"] = ...
 
-    # Speichere die *gesamte* modifizierte Root-Struktur
+    # 4. Speichere die *gesamte* modifizierte Root-Struktur
     try:
+        # Kein {"order": ...} Wrapper mehr nötig
         with open(output_filename, 'w', encoding='utf-8') as f:
-            json.dump(original_data_root, f, indent=4, ensure_ascii=False)
-        print(f"JSON-Datei ('{os.path.basename(output_filename)}') erfolgreich mit Zentrumskoordinaten aktualisiert.")
+            json.dump(original_data_root, f, indent=4, ensure_ascii=False) # indent=4 für Lesbarkeit
+        print(f"JSON-Datei ('{os.path.basename(output_filename)}') erfolgreich mit Platzierungen aktualisiert.")
     except Exception as e:
         print(f"FEHLER beim Speichern der finalen JSON-Datei: {e}")
 # -------------------- HAUPTPROGRAMM (Headless) --------------------
