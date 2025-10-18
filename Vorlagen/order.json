@@ -2,6 +2,7 @@
   "order": {
     "order_id": "",
     "delivery_country": "",
+    "delivery_region": "",
     "created_at": "",
     "updated_at": "",
     "container_definitions": [
@@ -106,7 +107,10 @@
           "container_id": "",
           "type": "",
           "total_weight_kg": null,
-          "efficiency_percent": null
+          "efficiency_percent": null,
+          "placed_objects": [
+            { "id": null, "stack_level": null, "position": { "x": null, "y": null, "z": null }, "rotation": { "x_axis": null, "y_axis": null, "z_axis": null } }
+          ] 
         }
       ]
     }
