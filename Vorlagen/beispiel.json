@@ -1,0 +1,118 @@
+{
+  "order": {
+    "order_id": "ORD-2023-1027-A4B8",
+    "delivery_country": "DE",
+    "delivery_region": "BW",
+    "created_at": "2023-10-27T10:00:00Z",
+    "updated_at": "2023-10-27T14:35:10Z",
+    "container_definitions": [
+      {
+        "type": "20-fuß",
+        "inner_dimensions": { "length": 5867, "width": 2330, "height": 2350 },
+        "door_dimensions": { "width": 2286, "height": 2261 },
+        "max_weight_kg": 28200,
+        "tare_weight_kg": 2200,
+        "volume_m3": 33.1,
+        "use": true,
+        "numbers": 5
+      },
+      {
+        "type": "40-fuß",
+        "inner_dimensions": { "length": 11998, "width": 2330, "height": 2350 },
+        "door_dimensions": { "width": 2286, "height": 2261 },
+        "max_weight_kg": 26500,
+        "tare_weight_kg": 3750,
+        "volume_m3": 67.7,
+        "use": false,
+        "numbers": 0
+      },
+      {
+        "type": "40-fuß-hc",
+        "inner_dimensions": { "length": 11998, "width": 2330, "height": 2655 },
+        "door_dimensions": { "width": 2286, "height": 2566 },
+        "max_weight_kg": 26480,
+        "tare_weight_kg": 3770,
+        "volume_m3": 76.4,
+        "use": true,
+        "numbers": 3
+      },
+      {
+        "type": "40-fuß-hw",
+        "inner_dimensions": { "length": 11998, "width": 2330, "height": 2350 },
+        "door_dimensions": { "width": 2286, "height": 2261 },
+        "max_weight_kg": 26500,
+        "tare_weight_kg": 3750,
+        "volume_m3": 67.7,
+        "use": false,
+        "numbers": 0
+      }
+    ],
+    "objects": [
+      { "id": 1, "product_name": "Hauptmaschine Basis", "category": "Maschinerie", "quantity": 1, "weight_kg": 3500, "form": { "type": "rectangle", "length": 2500, "width": 2000, "height": 1500 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": 1, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 165, "y": 9498, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 2, "product_name": "Schaltschrank A", "category": "Elektronik", "quantity": 1, "weight_kg": 850, "form": { "type": "rectangle", "length": 800, "width": 1200, "height": 2200 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": null, "temperature_range": { "min": 0, "max": 40 }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 0, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 3, "product_name": "Schaltschrank B", "category": "Elektronik", "quantity": 1, "weight_kg": 850, "form": { "type": "rectangle", "length": 800, "width": 1200, "height": 2200 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": null, "temperature_range": { "min": 0, "max": 40 }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 1200, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 4, "product_name": "Fass Kühlmittel", "category": "Verbrauchsmaterial", "quantity": 8, "weight_kg": 220, "form": { "type": "cylinder", "height": 950, "radius": 300 }, "constraints": { "allow_rotation": false, "is_stackable": true, "max_stack_weight_kg": 500, "temperature_range": { "min": 5, "max": 25 }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }}},
+      { "id": 5, "product_name": "Stahlrohre 6m", "category": "Material", "quantity": 10, "weight_kg": 150, "form": { "type": "cylinder", "height": 6000, "radius": 50 }, "constraints": { "allow_rotation": true, "is_stackable": true, "max_stack_weight_kg": 3000, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 0, "y": 2600, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }}},
+      { "id": 6, "product_name": "Kiste mit Schrauben", "category": "Kleinteile", "quantity": 20, "weight_kg": 25, "form": { "type": "rectangle", "length": 400, "width": 300, "height": 200 }, "constraints": { "allow_rotation": true, "is_stackable": true, "max_stack_weight_kg": 200, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 1500, "y": 0, "z": 1500 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 7, "product_name": "Montagerahmen", "category": "Maschinerie", "quantity": 2, "weight_kg": 450, "form": { "type": "rectangle", "length": 3000, "width": 100, "height": 1800 }, "constraints": { "allow_rotation": true, "is_stackable": true, "max_stack_weight_kg": 1000, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 2230, "y": 2600, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 8, "product_name": "Palette mit Filtern", "category": "Verbrauchsmaterial", "quantity": 1, "weight_kg": 600, "form": { "type": "rectangle", "length": 1200, "width": 800, "height": 1000 }, "constraints": { "allow_rotation": false, "is_stackable": true, "max_stack_weight_kg": 1200, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 0, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 9, "product_name": "Ersatzmotor", "category": "Maschinerie", "quantity": 1, "weight_kg": 1200, "form": { "type": "rectangle", "length": 900, "width": 700, "height": 800 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 800, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 10, "product_name": "Werkzeugkiste groß", "category": "Werkzeug", "quantity": 1, "weight_kg": 180, "form": { "type": "rectangle", "length": 1500, "width": 600, "height": 700 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 800, "y": 1400, "z": 800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 11, "product_name": "Kabeltrommel", "category": "Elektronik", "quantity": 2, "weight_kg": 350, "form": { "type": "cylinder", "height": 800, "radius": 400 }, "constraints": { "allow_rotation": true, "is_stackable": false, "max_stack_weight_kg": 0, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 1500, "y": 1400, "z": 0 }, "rotation": { "x_axis": "height", "y_axis": "radius", "z_axis": "radius" }}},
+      { "id": 12, "product_name": "Lüftungseinheit", "category": "Maschinerie", "quantity": 1, "weight_kg": 730, "form": { "type": "rectangle", "length": 1100, "width": 1100, "height": 1800 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": null, "temperature_range": { "min": 0, "max": 40 }}, "placement": { "container_type": "40-fuß-hc", "container_id": "C1-40HC-01", "position": { "x": 0, "y": 2300, "z": 1000 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      
+      { "id": 13, "product_name": "Sensoren-Set", "category": "Elektronik", "quantity": 50, "weight_kg": 5, "form": { "type": "rectangle", "length": 250, "width": 200, "height": 150 }, "constraints": { "allow_rotation": true, "is_stackable": true, "max_stack_weight_kg": 100, "loading_priority": null, "temperature_range": { "min": 0, "max": 50 }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 14, "product_name": "Hydraulik-Pumpe", "category": "Maschinerie", "quantity": 3, "weight_kg": 250, "form": { "type": "rectangle", "length": 700, "width": 500, "height": 600 }, "constraints": { "allow_rotation": false, "is_stackable": true, "max_stack_weight_kg": 500, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 1000, "y": 4867, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 15, "product_name": "Getriebeöl Kanister", "category": "Verbrauchsmaterial", "quantity": 40, "weight_kg": 20, "form": { "type": "rectangle", "length": 300, "width": 250, "height": 400 }, "constraints": { "allow_rotation": false, "is_stackable": true, "max_stack_weight_kg": 80, "loading_priority": null, "temperature_range": { "min": 5, "max": 25 }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 0, "y": 1000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 16, "product_name": "Dichtungsringe Box", "category": "Kleinteile", "quantity": 5, "weight_kg": 15, "form": { "type": "rectangle", "length": 500, "width": 500, "height": 500 }, "constraints": { "allow_rotation": true, "is_stackable": true, "max_stack_weight_kg": 150, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 0, "y": 0, "z": 1800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 17, "product_name": "Kupferrohr-Bund", "category": "Material", "quantity": 1, "weight_kg": 400, "form": { "type": "cylinder", "height": 500, "radius": 700 }, "constraints": { "allow_rotation": true, "is_stackable": true, "max_stack_weight_kg": 2000, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 1500, "y": 4467, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }}},
+      { "id": 18, "product_name": "Sicherheitsglas-Platte", "category": "Material", "quantity": 10, "weight_kg": 80, "form": { "type": "rectangle", "length": 10, "width": 1200, "height": 2000 }, "constraints": { "allow_rotation": true, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": 2, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 2230, "y": 0, "z": 0 }, "rotation": { "x_axis": "length", "y_axis": "width", "z_axis": "height" }}},
+      { "id": 19, "product_name": "Bürostuhl", "category": "Möbel", "quantity": 4, "weight_kg": 18, "form": { "type": "rectangle", "length": 700, "width": 700, "height": 1100 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "loading_priority": null, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 0, "y": 2000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}},
+      { "id": 20, "product_name": "Feuerlöscher", "category": "Sicherheit", "quantity": 6, "weight_kg": 15, "form": { "type": "cylinder", "height": 600, "radius": 100 }, "constraints": { "allow_rotation": false, "is_stackable": false, "max_stack_weight_kg": 0, "temperature_range": { "min": null, "max": null }}, "placement": { "container_type": "20-fuß", "container_id": "C2-20FT-01", "position": { "x": 1800, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }}}
+    ],
+    "loading_plan": {
+      "containers": [
+        {
+          "sequence": 1,
+          "instance_id": "C1-40HC-01",
+          "container_id": "MSKU1234567",
+          "type": "40-fuß-hc",
+          "total_weight_kg": 12110,
+          "efficiency_percent": 88.5,
+          "placed_objects": [
+            { "id": 5, "stack_level": 1, "position": { "x": 0, "y": 2600, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }},
+            { "id": 4, "stack_level": 1, "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }},
+            { "id": 8, "stack_level": 1, "position": { "x": 0, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 9, "stack_level": 1, "position": { "x": 800, "y": 1400, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 2, "stack_level": 1, "position": { "x": 0, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 3, "stack_level": 1, "position": { "x": 1200, "y": 8698, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 1, "stack_level": 1, "position": { "x": 165, "y": 9498, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 7, "stack_level": 1, "position": { "x": 2230, "y": 2600, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 10, "stack_level": 2, "position": { "x": 800, "y": 1400, "z": 800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 12, "stack_level": 2, "position": { "x": 0, "y": 2300, "z": 1000 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 6, "stack_level": 2, "position": { "x": 1500, "y": 0, "z": 1500 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 11, "stack_level": 1, "position": { "x": 1500, "y": 1400, "z": 0 }, "rotation": { "x_axis": "height", "y_axis": "radius", "z_axis": "radius" }}
+          ] 
+        },
+        {
+          "sequence": 2,
+          "instance_id": "C2-20FT-01",
+          "container_id": "CMAU7654321",
+          "type": "20-fuß",
+          "total_weight_kg": 3417,
+          "efficiency_percent": 75.2,
+          "placed_objects": [
+            { "id": 13, "stack_level": 1, "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 15, "stack_level": 1, "position": { "x": 0, "y": 1000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 19, "stack_level": 1, "position": { "x": 0, "y": 2000, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 14, "stack_level": 1, "position": { "x": 1000, "y": 4867, "z": 0 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }},
+            { "id": 17, "stack_level": 1, "position": { "x": 1500, "y": 4467, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "height", "z_axis": "radius" }},
+            { "id": 20, "stack_level": 1, "position": { "x": 1800, "y": 0, "z": 0 }, "rotation": { "x_axis": "radius", "y_axis": "radius", "z_axis": "height" }},
+            { "id": 18, "stack_level": 1, "position": { "x": 2230, "y": 0, "z": 0 }, "rotation": { "x_axis": "length", "y_axis": "width", "z_axis": "height" }},
+            { "id": 16, "stack_level": 2, "position": { "x": 0, "y": 0, "z": 1800 }, "rotation": { "x_axis": "width", "y_axis": "length", "z_axis": "height" }}
+          ]
+        }
+      ]
+    }
+  }
+}
