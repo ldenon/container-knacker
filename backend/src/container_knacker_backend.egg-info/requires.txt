@@ -1,0 +1,4 @@
+geneticalgorithm>=1.0.2
+matplotlib>=3.10.7
+networkx>=3.5
+numpy>=2.3.4
