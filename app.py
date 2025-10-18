@@ -7,7 +7,7 @@ from flask_cors import CORS
 # --- FLASK SERVER SETUP ---
 
 # Initialisiere die Flask-App
-app = Flask(__name__, template_folder='../Frontend Eingabe')
+app = Flask(__name__)
 
 CORS(app)
 
@@ -15,7 +15,7 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('./Frontend_Eingabe/index.html')
 
 @app.route('/api/optimize', methods=['POST'])
 def optimize_route():
