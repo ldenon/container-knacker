@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import data from "@/data/data.json";
+import { date } from "astro:schema";
+import { Button } from "@/components/ui/button";
+console.log(data);
+---
+
+<Layout>
+  <main class="w-4xl mx-auto py-20 font-bold">
+    <h1 class="text-4xl">Bestellungen</h1>
+
+    <div class="flex flex-col my-12 gap-y-6">
+      {
+        [1, 2, 3].map((v, i) => (
+          <div class="w-full flex justify-between">
+            <span class="text-semibold text-xl">ORD-2023-1027-A4B8</span>
+            <Button>3D View</Button>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</Layout>

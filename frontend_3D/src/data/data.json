@@ -1,0 +1,224 @@
+{
+  "container": {
+    "width": 250.0,
+    "height": 550.0
+  },
+  "item_count": 22,
+  "items": [
+    {
+      "id": 0,
+      "type_id": 2,
+      "type_name": "Fass (Rund)",
+      "center_x": 85.5,
+      "center_y": 28.5,
+      "geometry": "circle",
+      "radius": 28.5
+    },
+    {
+      "id": 1,
+      "type_id": 2,
+      "type_name": "Fass (Rund)",
+      "center_x": 142.506,
+      "center_y": 28.5,
+      "geometry": "circle",
+      "radius": 28.5
+    },
+    {
+      "id": 2,
+      "type_id": 2,
+      "type_name": "Fass (Rund)",
+      "center_x": 28.5,
+      "center_y": 28.5,
+      "geometry": "circle",
+      "radius": 28.5
+    },
+    {
+      "id": 3,
+      "type_id": 2,
+      "type_name": "Fass (Rund)",
+      "center_x": 114.001,
+      "center_y": 77.863,
+      "geometry": "circle",
+      "radius": 28.5
+    },
+    {
+      "id": 4,
+      "type_id": 2,
+      "type_name": "Fass (Rund)",
+      "center_x": 199.515,
+      "center_y": 28.5,
+      "geometry": "circle",
+      "radius": 28.5
+    },
+    {
+      "id": 5,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 200.0,
+      "center_y": 267.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 6,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 40.0,
+      "center_y": 267.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 7,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 40.0,
+      "center_y": 207.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 8,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 182.501,
+      "center_y": 87.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 9,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 40.0,
+      "center_y": 87.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 10,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 120.0,
+      "center_y": 267.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 11,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 200.0,
+      "center_y": 207.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 12,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 120.0,
+      "center_y": 147.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 13,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 120.0,
+      "center_y": 207.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 14,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 200.0,
+      "center_y": 147.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 15,
+      "type_id": 3,
+      "type_name": "Halbpalette",
+      "center_x": 40.0,
+      "center_y": 147.0,
+      "geometry": "rectangle",
+      "width": 80.0,
+      "height": 60.0
+    },
+    {
+      "id": 16,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 60.598,
+      "center_y": 417.0,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    },
+    {
+      "id": 17,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 180.161,
+      "center_y": 497.001,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    },
+    {
+      "id": 18,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 60.0,
+      "center_y": 497.0,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    },
+    {
+      "id": 19,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 180.0,
+      "center_y": 337.0,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    },
+    {
+      "id": 20,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 180.776,
+      "center_y": 417.0,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    },
+    {
+      "id": 21,
+      "type_id": 0,
+      "type_name": "Europalette",
+      "center_x": 60.0,
+      "center_y": 337.0,
+      "geometry": "rectangle",
+      "width": 120.0,
+      "height": 80.0
+    }
+  ]
+}

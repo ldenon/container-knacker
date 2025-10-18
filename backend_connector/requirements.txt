@@ -1,4 +1,3 @@
 Flask
 Flask-Cors
-# Füge hier später deine Bibliotheken für den Algorithmus und PDF hinzu
-# z.B. reportlab für PDFs
+fpdf2
