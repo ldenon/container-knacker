@@ -1,88 +1,18 @@
 import networkx as nx
 import math
 import time
-
+from three_dimensional import Objekt
 # Konstanten für die Beschränkung
 TOP_K_BASEN = 12
 TIMEOUT_SEKUNDEN = 180 # 3 Minuten
 
 
-class Objekt:
-    def __init__(self, name, form, params, hoehe):
-        self.name = name
-        self.form = form  # 'Zylinder' oder 'Quader'
-        self.hoehe = hoehe
-        self.grundflaeche, self.abmessungen = self._berechne_grundflaeche(params)
-
-    def _berechne_grundflaeche(self, params):
-        if self.form == 'Zylinder':
-            # params = [radius]
-            radius = params[0]
-            flaeche = math.pi * radius**2
-            # Abmessungen für die Stapelprüfung (Radius)
-            return flaeche, {'radius': radius}
-        elif self.form == 'Quader':
-            # params = [laenge, breite]
-            laenge, breite = params
-            flaeche = laenge * breite
-            # Abmessungen für die Stapelprüfung (Seiten)
-            return flaeche, {'laenge': laenge, 'breite': breite}
-        return 0, {}
-    
-    def kann_traeger_sein_fuer(self, objekt_oben):
-        """Prüft, ob 'self' als Träger für 'objekt_oben' dienen kann."""
-        # 1. Stapelregel: Kleineres Objekt auf Größerem (Grundfläche darf nicht überragen)
-
-        # Vereinfachte Annahme für die Optimierung: Nur Grundflächenvergleich (A_oben <= A_unten)
-        # Für eine exakte Prüfung müsste man die Abmessungen (Radius/Länge/Breite) prüfen.
-        if objekt_oben.grundflaeche > self.grundflaeche:
-            return False
-
-        # Exakte Prüfung (wichtig, da z.B. ein langer Quader nicht auf einem kleineren Zylinder stehen kann)
-        # Diese komplexe Logik hängt von der genauen Definition des "Nicht-Überragens" ab
-        # und wird hier vereinfacht auf A_oben <= A_unten.
-
-        return True
-
-    def kann_traeger_sein_fuer_no_overlap(self, objekt_oben):
-        """Prüft, ob 'self' als Träger für 'objekt_oben' dienen kann."""
-        # 1. Stapelregel: Kleineres Objekt auf Größerem (Grundfläche darf nicht überragen)
-
-        # Vereinfachte Annahme für die Optimierung: Nur Grundflächenvergleich (A_oben <= A_unten)
-        # Für eine exakte Prüfung müsste man die Abmessungen (Radius/Länge/Breite) prüfen.
-        if objekt_oben.grundflaeche > self.grundflaeche:
-            return False
-        # check if the shape allows stacking -> no overlap when projected downwards
-        if self.form == 'Zylinder' and objekt_oben.form == 'Zylinder':
-            # Zylinder auf Zylinder
-            return objekt_oben.abmessungen['radius'] <= self.abmessungen['radius']
-        elif self.form == 'Quader' and objekt_oben.form == 'Quader':
-            # Quader auf Quader
-            return (objekt_oben.abmessungen['laenge'] <= self.abmessungen['laenge'] and
-                    objekt_oben.abmessungen['breite'] <= self.abmessungen['breite'])
-        elif self.form == 'Quader' and objekt_oben.form == 'Zylinder':
-            # Zylinder auf Quader
-            return (2 * objekt_oben.abmessungen['radius'] <= self.abmessungen['laenge'] and
-                    2 * objekt_oben.abmessungen['radius'] <= self.abmessungen['breite'])
-        elif self.form == 'Zylinder' and objekt_oben.form == 'Quader':
-            # Quader auf Zylinder
-            return (math.sqrt((objekt_oben.abmessungen['laenge']/2)**2 + (objekt_oben.abmessungen['breite']/2)**2)
-                    <= self.abmessungen['radius'])
-        # Exakte Prüfung (wichtig, da z.B. ein langer Quader nicht auf einem kleineren Zylinder stehen kann)
-        # Diese komplexe Logik hängt von der genauen Definition des "Nicht-Überragens" ab
-        # und wird hier vereinfacht auf A_oben <= A_unten.
-
-        return True
-
-    def __repr__(self):
-        return f"Objekt('{self.name}', A={self.grundflaeche:.2f}, H={self.hoehe})"
-
-
 class StapelOptimierer:
 
-    def __init__(self, objekte, max_hoehe):
+    def __init__(self, objekte, max_hoehe, verbose=False):
         self.objekte = objekte
         self.max_hoehe = max_hoehe
+        self.verbose = verbose
         self.graph = nx.DiGraph()
         self.erzeuge_graphen()
 
@@ -104,9 +34,10 @@ class StapelOptimierer:
                     
                     # Kante (unten -> oben) bedeutet: Objekt 'oben' kann direkt auf 'unten' gestapelt werden
                     self.graph.add_edge(unten, oben, gewicht=oben.hoehe)
-        print("Erzeugter Stapelgraph mit Kanten:")
-        for u, v, data in self.graph.edges(data=True):
-            print(f"  {u.name} -> {v.name} (Gewicht: {data['gewicht']})")
+        if self.verbose:
+            print("Erzeugter Stapelgraph mit Kanten:")
+            for u, v, data in self.graph.edges(data=True):
+                print(f"  {u.name} -> {v.name} (Gewicht: {data['gewicht']})")
 
 # ... (Klasse Objekt und Klasse StapelOptimierer initialisierung bleibt unverändert) ...
 
@@ -194,7 +125,8 @@ class StapelOptimierer:
         
         # 2. Beschränkung auf die TOP-K=10 Basis-Kandidaten
         basis_kandidaten_begrenzt = basis_kandidaten_sortiert[:TOP_K_BASEN]
-        print(f"Beschränke die gierige Auswahl auf die Top-{TOP_K_BASEN} Stapelbasen.")
+        if self.verbose:
+            print(f"Beschränke die gierige Auswahl auf die Top-{TOP_K_BASEN} Stapelbasen.")
 
         for basis in basis_kandidaten_begrenzt:
             # 3. Timeout-Prüfung
@@ -249,26 +181,107 @@ class StapelOptimierer:
         end_zeit = time.time()
         
         # --- KORRIGIERTE AUSGABE ---
-        print("\n--- Ergebnis ---")
-        print(f"Gesamtzeit für Stapelauswahl: {end_zeit - start_zeit:.4f} Sekunden.")
-        print("Gefundene Stapel:")
-        for i, stapel in enumerate(fertige_stapel):
-             # KORREKTUR: Jetzt verwenden wir die Liste von Objekt-Instanzen im Stapel
-             print(f" Stapel {i+1}: {[obj.name for obj in stapel]}") 
-        print(f"Gesamt genutzte Grundfläche: {gesamt_grundflaeche:.2f}")
+        if self.verbose:
+            print("\n--- Ergebnis ---")
+            print(f"Gesamtzeit für Stapelauswahl: {end_zeit - start_zeit:.4f} Sekunden.")
+            print("Gefundene Stapel:")
+            for i, stapel in enumerate(fertige_stapel):
+                 # KORREKTUR: Jetzt verwenden wir die Liste von Objekt-Instanzen im Stapel
+                 print(f" Stapel {i+1}: {[obj.name for obj in stapel]}") 
+            print(f"Gesamt genutzte Grundfläche: {gesamt_grundflaeche:.2f}")
 
         return fertige_stapel, gesamt_grundflaeche            
 
+
+
+    def stapel_zu_objekten_aggregieren(self, fertige_stapel):
+        """
+        Aggregiert die gefundenen Stapel zu neuen, virtuellen Objekt-Instanzen.
+        """
+        neue_objekte = []
         
+        for i, stapel in enumerate(fertige_stapel):
+            # 1. Sammle alle Attribute
+            basis_objekt = stapel[0]
+            
+            # Form- und Attributprüfung
+            formen = {obj.form for obj in stapel}
+            
+            if len(formen) == 1 and 'Quader' in formen:
+                neue_form = 'Quader' # Reiner Quader-Stapel
+                # Grundfläche/Abmessungen basieren auf der Basis
+                neue_flaeche = basis_objekt.grundflaeche
+                neue_abmessungen = basis_objekt.abmessungen
+                
+            elif len(formen) == 1 and 'Zylinder' in formen:
+                neue_form = 'Zylinder' # Reiner Zylinder-Stapel
+                # Grundfläche/Abmessungen basieren auf der Basis
+                neue_flaeche = basis_objekt.grundflaeche
+                neue_abmessungen = basis_objekt.abmessungen
+                
+            else:
+                neue_form = 'Quader' # Gemischter Stapel
+                
+                # Finde maximale Abmessungen (für das kleinste umschließende Rechteck)
+                max_laenge = 0
+                max_breite = 0
+
+                for obj in stapel:
+                    if obj.form == 'Quader':
+                        max_laenge = max(max_laenge, obj.abmessungen['laenge'])
+                        max_breite = max(max_breite, obj.abmessungen['breite'])
+                    elif obj.form == 'Zylinder':
+                        durchmesser = 2 * obj.abmessungen['radius']
+                        max_laenge = max(max_laenge, durchmesser)
+                        max_breite = max(max_breite, durchmesser)
+                
+                # Neue Grundfläche des umschließenden Rechtecks
+                neue_flaeche = max_laenge * max_breite
+                neue_abmessungen = {'laenge': max_laenge, 'breite': max_breite}
+            
+            # Allgemeine Attribute
+            neuer_name = f"Stapel_{i+1}"
+            neue_hoehe = sum(obj.hoehe for obj in stapel)
+            neue_gewicht = sum(obj.gewicht_kg for obj in stapel) # Platzhalter: Summe der Höhen als Gewicht
+
+            # 2. Erstellung des neuen Objekt-Containers (vereinfacht, da wir nicht alle 
+            #    Ursprungs-Initialisierungsparameter haben)
+            
+            # Wir müssen eine Methode schaffen, um das Objekt mit den berechneten Werten zu instanziieren:
+            
+            # Simuliere die Initialisierung mit den berechneten Werten:
+            # Wir verwenden die Basis-Initialisierung (Form/Params), aber überschreiben Flache/Abmessungen.
+            
+            if neue_form == 'Zylinder':
+                neue_objekt_params = [neue_abmessungen['radius']]
+            elif neue_form == 'Quader':
+                neue_objekt_params = [neue_abmessungen['laenge'], neue_abmessungen['breite']]
+            else:
+                neue_objekt_params = [] # Fallback
+                
+            neues_objekt = Objekt(neuer_name, neue_form, neue_objekt_params, neue_hoehe, neue_gewicht)
+            
+            # Wichtig: Überschreibe die berechnete Grundfläche und Abmessungen,
+            # falls die interne _berechne_grundflaeche Logik abweicht (besonders bei gemischten Stapeln).
+            neues_objekt.grundflaeche = neue_flaeche
+            neues_objekt.abmessungen = neue_abmessungen
+            neues_objekt.gewicht_kg = neue_gewicht # Füge Gewicht hinzu
+            
+            neue_objekte.append(neues_objekt)
+
+        return neue_objekte
+
+
+
 if __name__ == "__main__":
     # Beispielobjekte
     objekte = [
-        Objekt("Objekt1", "Quader", [4, 4], 5),
-        Objekt("Objekt2", "Zylinder", [2], 3),
-        Objekt("Objekt3", "Quader", [3, 3], 4),
-        Objekt("Objekt4", "Zylinder", [1.5], 2),
-        Objekt("Objekt5", "Quader", [2, 2], 2),
-        Objekt("Objekt6", "Zylinder", [1], 1)
+        Objekt("Objekt1", "Quader", [4, 4], 5, 10),
+        Objekt("Objekt2", "Zylinder", [2], 3, 5),
+        Objekt("Objekt3", "Quader", [3, 3], 4, 8),
+        Objekt("Objekt4", "Zylinder", [1.5], 2, 3),
+        Objekt("Objekt5", "Quader", [2, 2], 2, 4),
+        Objekt("Objekt6", "Zylinder", [1], 1, 2)
     ]
 
     max_hoehe = 10
@@ -282,3 +295,8 @@ if __name__ == "__main__":
     for i, stapel in enumerate(stapel_loesung):
         print(f" Stapel {i+1}: {[obj.name for obj in stapel]}")
     print(f"Gesamt genutzte Grundfläche: {gesamt_grundflaeche:.2f}")
+    stack_obj = optimierer.stapel_zu_objekten_aggregieren(stapel_loesung)
+    print("Länge der aggregierten Objekte:", len(stack_obj))
+    print("Aggregierte Objekte aus Stapeln:")
+    for obj in stack_obj:
+        print(f" Objekt: {obj.name}, Form: {obj.form}, Höhe: {obj.hoehe}, Gewicht: {obj.gewicht_kg}kg")
