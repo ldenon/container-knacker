@@ -3,11 +3,12 @@ import math
 
 
 class Objekt:
-    def __init__(self, name, form, params, hoehe):
+    def __init__(self, name, form, params, hoehe, gewicht_kg):
         self.name = name
         self.form = form  # 'Zylinder' oder 'Quader'
         self.hoehe = hoehe
         self.grundflaeche, self.abmessungen = self._berechne_grundflaeche(params)
+        self.gewicht_kg = gewicht_kg
 
     def _berechne_grundflaeche(self, params):
         if self.form == 'Zylinder':
@@ -22,6 +23,8 @@ class Objekt:
             flaeche = laenge * breite
             # Abmessungen für die Stapelprüfung (Seiten)
             return flaeche, {'laenge': laenge, 'breite': breite}
+        else:
+            print("Unknown object type in grundflaeche calculation")
         return 0, {}
     
     def kann_traeger_sein_fuer(self, objekt_oben):
