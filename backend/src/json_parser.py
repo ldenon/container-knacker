@@ -8,7 +8,6 @@ import importlib.util
 import sys
 import os
 # import the Objekt class from the 3dimensional.py file
-from backend.transport_objects._3dimensional import Objekt
 
 @dataclass
 class ContainerDim:
