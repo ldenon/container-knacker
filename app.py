@@ -1,3 +1,5 @@
+import json
+
 from backend_connector.pdf_generator import generate_packing_list_pdf
 from flask import Flask, request, jsonify, send_file, redirect, url_for, render_template
 from flask_cors import CORS
@@ -27,15 +29,22 @@ def optimize_route():
         return jsonify({"error": "Anfrage muss JSON-Daten enthalten"}), 400
 
     initial_data = request.get_json()
-    
+
     # Rufe deine Logik auf
     #optimized_data = run_optimization_algorithm(initial_data)
-    optimized_data = None
+    optimized_data = initial_data
+
     
+    print()
     if optimized_data is None:
         return jsonify({"error": "Bei der Optimierung ist ein Fehler aufgetreten"}), 500
         
-    return jsonify(optimized_data)
+        # JSON-Datei lokal speichern
+    with open('optimized_output.json', 'w', encoding='utf-8') as f:
+        json.dump(optimized_data, f, ensure_ascii=False, indent=4)
+
+    # Optional: nur Bestätigung zurücksenden
+    return {"status": "gespeichert"}, 200
 
 @app.route('/api/ladebalken')
 def routeToLadebalken():
