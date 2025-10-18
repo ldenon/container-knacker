@@ -1,0 +1,114 @@
+{
+  "order": {
+    "order_id": "",
+    "delivery_country": "",
+    "created_at": "",
+    "updated_at": "",
+    "container_definitions": [
+      {
+        "type": "20-fuß",
+        "inner_dimensions": { "length": 5867, "width": 2330, "height": 2350 },
+        "door_dimensions": { "width": 2286, "height": 2261 },
+        "max_weight_kg": 28000,
+        "tare_weight_kg": null,
+        "volume_m3": null,
+        "use": false,
+        "numbers": null
+      },
+      {
+        "type": "40-fuß",
+        "inner_dimensions": { "length": 11998, "width": 2330, "height": 2350 },
+        "door_dimensions": { "width": 2286, "height": 2261 },
+        "max_weight_kg": null,
+        "tare_weight_kg": null,
+        "volume_m3": null,
+        "use": false,
+        "numbers": null
+      },
+      {
+        "type": "40-fuß-hc",
+        "inner_dimensions": { "length": 11998, "width": 2330, "height": 2655 },
+        "door_dimensions": { "width": 2286, "height": 2566 },
+        "max_weight_kg": null,
+        "tare_weight_kg": null,
+        "volume_m3": null,
+        "use": false,
+        "numbers": null
+      },
+      {
+        "type": "40-fuß-hw",
+        "inner_dimensions": { "length": 11998, "width": 2330, "height": 2350 },
+        "door_dimensions": { "width": 2286, "height": 2261 },
+        "max_weight_kg": null,
+        "tare_weight_kg": null,
+        "volume_m3": null,
+        "use": false,
+        "numbers": null
+      }
+    ],
+    "objects": [
+      {
+        "id": 1,
+        "product_name": "",
+        "category": "",
+        "quantity": null,
+        "weight_kg": null,
+        "form": {
+          "type": "rectangle",
+          "length": 1200,
+          "width": 800,
+          "height": 1000
+        },
+        "constraints": {
+          "allow_rotation": false,
+          "is_stackable": true,
+          "max_stack_weight_kg": null,
+          "loading_priority": null,
+          "temperature_range": { "min": null, "max": null }
+        },
+        "placement": {
+          "container_type": null,
+          "container_id": "",
+          "position": { "x": null, "y": null, "z": null },
+          "rotation": { "x_axis": null, "y_axis": null, "z_axis": null }
+        }
+      },
+      {
+        "id": 2,
+        "product_name": "Rohrleitungen Typ B",
+        "category": "",
+        "quantity": null,
+        "weight_kg": null,
+        "form": {
+          "type": "cylinder",
+          "height": null,
+          "radius": null
+        },
+        "constraints": {
+          "allow_rotation": true,
+          "is_stackable": true,
+          "max_stack_weight_kg": null,
+          "temperature_range": { "min": null, "max": null }
+        },
+        "placement": {
+          "container_type": null,
+          "container_id": "",
+          "position": { "x": null, "y": null, "z": null },
+          "rotation": { "x_axis": null, "y_axis": null, "z_axis": null }
+        }
+      }
+    ],
+    "loading_plan": {
+      "containers": [
+        {
+          "sequence": 1,
+          "instance_id": "",
+          "container_id": "",
+          "type": "",
+          "total_weight_kg": null,
+          "efficiency_percent": null
+        }
+      ]
+    }
+  }
+}

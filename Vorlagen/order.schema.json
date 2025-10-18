@@ -1,0 +1,134 @@
+{
+  "title": "Container Loading Order Schema",
+  "type": "object",
+  "properties": {
+    "order": {
+      "type": "object",
+      "properties": {
+        "order_id": { "type": "string" },
+        "delivery_country": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "container_definitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "inner_dimensions": {
+                "type": "object",
+                "properties": {
+                  "length": { "type": "number" },
+                  "width": { "type": "number" },
+                  "height": { "type": "number" }
+                },
+                "required": ["length", "width", "height"]
+              },
+              "door_dimensions": {
+                "type": "object",
+                "properties": {
+                  "width": { "type": "number" },
+                  "height": { "type": "number" }
+                },
+                "required": ["width", "height"]
+              },
+              "max_weight_kg": { "type": ["number", "null"] },
+              "tare_weight_kg": { "type": ["number", "null"] },
+              "volume_m3": { "type": ["number", "null"] },
+              "use": { "type": "boolean" },
+              "numbers": { "type": ["integer", "null"] }
+            },
+            "required": ["type", "inner_dimensions", "door_dimensions"]
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "integer" },
+              "product_name": { "type": "string" },
+              "category": { "type": "string" },
+              "quantity": { "type": ["number", "null"] },
+              "weight_kg": { "type": ["number", "null"] },
+              "form": {
+                "type": "object",
+                "properties": {
+                  "type": { "type": "string", "enum": ["rectangle", "cylinder"] },
+                  "length": { "type": ["number", "null"] },
+                  "width": { "type": ["number", "null"] },
+                  "height": { "type": ["number", "null"] },
+                  "radius": { "type": ["number", "null"] }
+                },
+                "required": ["type"]
+              },
+              "constraints": {
+                "type": "object",
+                "properties": {
+                  "allow_rotation": { "type": "boolean" },
+                  "is_stackable": { "type": "boolean" },
+                  "max_stack_weight_kg": { "type": ["number", "null"] },
+                  "loading_priority": { "type": ["integer", "null"] },
+                  "temperature_range": {
+                    "type": "object",
+                    "properties": {
+                      "min": { "type": ["number", "null"] },
+                      "max": { "type": ["number", "null"] }
+                    }
+                  }
+                }
+              },
+              "placement": {
+                "type": "object",
+                "properties": {
+                  "container_type": { "type": ["string", "null"] },
+                  "container_id": { "type": "string" },
+                  "position": {
+                    "type": "object",
+                    "properties": {
+                      "x": { "type": ["number", "null"] },
+                      "y": { "type": ["number", "null"] },
+                      "z": { "type": ["number", "null"] }
+                    }
+                  },
+                  "rotation": {
+                    "type": "object",
+                    "properties": {
+                      "x_axis": { "type": ["number", "null"] },
+                      "y_axis": { "type": ["number", "null"] },
+                      "z_axis": { "type": ["number", "null"] }
+                    }
+                  }
+                },
+                "required": ["container_id"]
+              }
+            },
+            "required": ["id", "product_name", "form", "constraints", "placement"]
+          }
+        },
+        "loading_plan": {
+          "type": "object",
+          "properties": {
+            "containers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sequence": { "type": "integer" },
+                  "instance_id": { "type": "string" },
+                  "container_id": { "type": "string" },
+                  "type": { "type": "string" },
+                  "total_weight_kg": { "type": ["number", "null"] },
+                  "efficiency_percent": { "type": ["number", "null"] }
+                },
+                "required": ["sequence", "container_id", "type"]
+              }
+            }
+          }
+        }
+      },
+      "required": ["delivery_country", "container_definitions", "objects", "loading_plan"]
+    }
+  },
+  "required": ["order"]
+}
