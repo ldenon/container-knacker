@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimierung läuft...</title>
+    <style>
+        /* Grundlegende Styles für die Seite */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Füllt die gesamte Bildschirmhöhe */
+        }
+
+        /* Der Container für den Ladebalken und Text */
+        .loader-container {
+            width: 90%;
+            max-width: 600px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            text-align: center;
+        }
+
+        /* Überschrift */
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Der äußere Rahmen des Ladebalkens */
+        .progress-bar {
+            width: 100%;
+            height: 25px;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden; /* Stellt sicher, dass der innere Balken nicht überläuft */
+            border: 1px solid #ccc;
+        }
+
+        /* Der innere, sich füllende Ladebalken */
+        .progress-bar-inner {
+            height: 100%;
+            width: 0%; /* Startet bei 0% Breite */
+            background-color: #3498db; /* Eine schöne blaue Farbe */
+            border-radius: 25px;
+            /* Sorgt für eine sanfte Animation bei jeder Erhöhung */
+            transition: width 0.3s ease-in-out; 
+        }
+
+        /* Der Text mit der Prozentanzeige */
+        #progress-text {
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-container">
+        <h1>Optimierung läuft...</h1>
+        <p>Ihr Ladeplan wird berechnet. Bitte haben Sie einen Moment Geduld.</p>
+        
+        <div class="progress-bar">
+            <div id="progressBarInner" class="progress-bar-inner"></div>
+        </div>
+        
+        <p id="progress-text">0%</p>
+    </div>
+
+    <script>
+        // --- KONFIGURATION ---
+        // Die Gesamtdauer des Ladevorgangs in Sekunden
+        const DURATION_IN_SECONDS = 30;
+        // Die Ziel-URL, zu der nach Abschluss umgeleitet wird
+        const REDIRECT_URL = 'https://bfh2025.denon.dev/'; // <-- ÄNDERE DIESE URL
+
+        // Referenzen auf die HTML-Elemente holen
+        const progressBarInner = document.getElementById('progressBarInner');
+        const progressText = document.getElementById('progress-text');
+
+        let progress = 0;
+
+        // Berechne das Intervall, um in 30 Sekunden auf 100% zu kommen
+        // 30.000 Millisekunden / 100 Schritte = 300ms pro Schritt
+        const intervalTime = (DURATION_IN_SECONDS * 1000) / 100;
+
+        // Starte das Intervall, um den Balken zu aktualisieren
+        const progressInterval = setInterval(() => {
+            if (progress < 100) {
+                progress++;
+                // Aktualisiere die Breite des Balkens
+                progressBarInner.style.width = progress + '%';
+                // Aktualisiere den Prozenttext
+                progressText.textContent = progress + '%';
+            } else {
+                // Stoppe das Intervall, wenn 100% erreicht sind
+                clearInterval(progressInterval);
+            }
+        }, intervalTime);
+
+        // Starte den Timer für die finale Umleitung
+        setTimeout(() => {
+            // Text ändern, um dem Benutzer Feedback zu geben
+            progressText.textContent = 'Abgeschlossen! Sie werden weitergeleitet...';
+
+            // Führe die Umleitung nach der festgelegten Dauer durch
+            window.location.href = REDIRECT_URL;
+        }, DURATION_IN_SECONDS * 1000);
+
+    </script>
+
+</body>
+</html>

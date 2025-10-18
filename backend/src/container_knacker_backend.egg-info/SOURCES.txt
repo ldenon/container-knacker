@@ -1,0 +1,13 @@
+pyproject.toml
+src/__init__.py
+src/json_parser.py
+src/make_3d_to_2d_problem.py
+src/three_dimensional.py
+src/two_dim_rect_and_circle_genetic_alg.py
+src/two_dim_rect_genetic_alg.py
+src/two_dimensional.py
+src/container_knacker_backend.egg-info/PKG-INFO
+src/container_knacker_backend.egg-info/SOURCES.txt
+src/container_knacker_backend.egg-info/dependency_links.txt
+src/container_knacker_backend.egg-info/requires.txt
+src/container_knacker_backend.egg-info/top_level.txt

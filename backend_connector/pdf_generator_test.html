@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladeplan PDF Generator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ladeplan PDF Generator</h1>
+        <p>Fügen Sie Ihre Ladeplan-JSON in das Textfeld ein und klicken Sie auf den Button, um die Ladeliste als PDF zu generieren.</p>
+        
+        <label for="jsonData">JSON-Daten:</label>
+        <textarea id="jsonData" rows="25"></textarea>
+
+        <button id="generatePdfButton">PDF Generieren & Herunterladen</button>
+        
+        <p id="status"></p>
+    </div>
+
+    <script>
+        // Vorbelegung des Textfeldes mit Ihrer Beispiel-JSON
+        const exampleJson = {
+          "order": {
+            "order_id": "ORD-DEMO-123",
+            "delivery_country": "DE",
+            "created_at": "2023-10-27T10:00:00Z",
+            "updated_at": "2023-10-27T14:35:10Z",
+            "container_definitions": [], // Kann leer sein, da es für die PDF-Generierung irrelevant ist
+            "objects": [
+              { "id": 1, "product_name": "Hauptmaschine Basis", "category": "Maschinerie", "quantity": 1, "weight_kg": 3500 },
+              { "id": 2, "product_name": "Schaltschrank A", "category": "Elektronik", "quantity": 1, "weight_kg": 850 }
+            ],
+            "loading_plan": {
+              "containers": [
+                {
+                  "sequence": 1,
+                  "instance_id": "C1-40HC-01",
+                  "container_id": "MSKU1234567",
+                  "type": "40-fuß-hc",
+                  "placed_objects": [ { "id": 1 }, { "id": 2 } ]
+                }
+              ]
+            }
+          }
+        };
+
+        // Das JSON-Objekt in einen formatierten String umwandeln und in die Textarea einfügen
+        document.getElementById('jsonData').value = JSON.stringify(exampleJson, null, 2);
+
+        // Referenzen auf die HTML-Elemente holen
+        const generateButton = document.getElementById('generatePdfButton');
+        const jsonDataTextarea = document.getElementById('jsonData');
+        const statusElement = document.getElementById('status');
+
+        // Event-Listener für den Button-Klick
+        generateButton.addEventListener('click', async () => {
+            const jsonString = jsonDataTextarea.value;
+            let jsonData;
+
+            // 1. Prüfen, ob die eingegebene JSON gültig ist
+            try {
+                jsonData = JSON.parse(jsonString);
+            } catch (error) {
+                statusElement.textContent = 'Fehler: Die eingegebene JSON ist ungültig!';
+                statusElement.style.color = 'red';
+                return; // Abbrechen
+            }
+
+            statusElement.textContent = 'Verarbeite Anfrage... PDF wird generiert...';
+            statusElement.style.color = '#333';
+
+            // 2. Die POST-Anfrage an den Flask-Server senden
+            try {
+                const response = await fetch('http://localhost:5000/api/generate-pdf', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: jsonString // Die JSON als String im Body senden
+                });
+
+                // 3. Die Antwort des Servers verarbeiten
+                if (!response.ok) {
+                    // Wenn der Server einen Fehler zurückgibt (z.B. Status 500)
+                    throw new Error(`Server-Fehler: ${response.status} ${response.statusText}`);
+                }
+
+                // Die Antwort ist eine Datei. Wir konvertieren sie in ein "Blob"
+                const pdfBlob = await response.blob();
+                
+                // Einen temporären Link erstellen, um den Download zu starten
+                const downloadUrl = window.URL.createObjectURL(pdfBlob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = downloadUrl;
+                
+                // Dateiname aus der JSON extrahieren oder einen Standardnamen verwenden
+                const orderId = jsonData.order?.order_id || 'ladeplan';
+                a.download = `ladeplan_${orderId}.pdf`;
+                
+                document.body.appendChild(a);
+                a.click(); // Simuliert einen Klick auf den Link
+                
+                // Aufräumen
+                window.URL.revokeObjectURL(downloadUrl);
+                document.body.removeChild(a);
+
+                statusElement.textContent = 'PDF-Download wurde erfolgreich gestartet!';
+                statusElement.style.color = 'green';
+
+            } catch (error) {
+                console.error('Fehler bei der Anfrage:', error);
+                statusElement.textContent = 'Ein Fehler ist aufgetreten. Ist der Server erreichbar?';
+                statusElement.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

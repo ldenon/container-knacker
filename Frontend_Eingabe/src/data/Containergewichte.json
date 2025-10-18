@@ -1,0 +1,769 @@
+{
+  "Arabische Emirate": [
+    {
+      "Region": "Jebel Ali",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Albanien": [
+    {
+      "Region": "Durres",
+      "twentyFoot": 23,
+      "fourtyFoot": 25
+    }
+  ],
+  "Argentinien": [
+    {
+      "Region": "Buenos Aires",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 26
+    }
+  ],
+  "Australien": [
+    {
+      "Region": "Brisbane",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Fremantle",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Melbourne",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Sydney",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Bangladesch": [
+    {
+      "Region": "Chittagong",
+      "twentyFoot": 20.5,
+      "fourtyFoot": 25.5
+    }
+  ],
+  "Brunei Darussalam": [
+    {
+      "Region": "Muara Port/Brunei",
+      "twentyFoot": 21,
+      "fourtyFoot": 24
+    }
+  ],
+  "Brasilien": [
+    {
+      "Region": "Manaus",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Navegantes",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Paranagua",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Santos",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Sao Paulo",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Suape",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Vitoria",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 26
+    }
+  ],
+  "Kanada": [
+    {
+      "Region": "Montreal",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Elfenbeinküste": [
+    {
+      "Region": "Abidjan",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Chile": [
+    {
+      "Region": "Arica",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Valparaiso",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    }
+  ],
+  "Kamerun": [
+    {
+      "Region": "Douala",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    }
+  ],
+  "China": [
+    {
+      "Region": "Beijing",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Guangzhou",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Huangpu",
+      "twentyFoot": 21,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Nantong",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Ningbo",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Qingdao",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Shanghai",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Shatian",
+      "twentyFoot": 20,
+      "fourtyFoot": 22
+    },
+    {
+      "Region": "Shekou",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Xiamen",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Yantian",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    }
+  ],
+  "Kolumbien": [
+    {
+      "Region": "Buenaventura",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Cartagena",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Costa Rica": [
+    {
+      "Region": "Puerto Limon",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "San Jose",
+      "twentyFoot": 18,
+      "fourtyFoot": 25
+    }
+  ],
+  "Kuba": [
+    {
+      "Region": "Havanna",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Santiago de Cuba",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Zypern": [
+    {
+      "Region": "Limassol",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Dominikanische Republik": [
+    {
+      "Region": "Caucedo",
+      "twentyFoot": 23,
+      "fourtyFoot": 25
+    }
+  ],
+  "Algerien": [
+    {
+      "Region": "El Djazair",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Ecuador": [
+    {
+      "Region": "Guayaquil",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Äypten": [
+    {
+      "Region": "Alexandria",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Port Said",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Spanien": [
+    {
+      "Region": "Santa Cruz de Ten.",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Georgien": [
+    {
+      "Region": "Poti",
+      "twentyFoot": 23,
+      "fourtyFoot": 26
+    }
+  ],
+  "Gambia": [
+    {
+      "Region": "Banjul",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Griechenland": [
+    {
+      "Region": "Chania",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Heraklion",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Piraeus",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Thessaloniki",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Guatemala": [
+    {
+      "Region": "Santo Thomas de C.",
+      "twentyFoot": 20,
+      "fourtyFoot": 20
+    },
+    {
+      "Region": "Puerto Barrios",
+      "twentyFoot": 20,
+      "fourtyFoot": 20
+    }
+  ],
+  "Guyana": [
+    {
+      "Region": "Georgetown/Guyana",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Hongkong": [
+    {
+      "Region": "Hongkong",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    }
+  ],
+  "Honduras": [
+    {
+      "Region": "Puerto Cortes",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Indonesien": [
+    {
+      "Region": "Jakarta",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Surabaya",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Israel": [
+    {
+      "Region": "Ashdod",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Haifa",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Indien": [
+    {
+      "Region": "Chennai",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Mumbai",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Mundra",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Nava Sheva",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    }
+  ],
+  "Iran": [
+    {
+      "Region": "Bandar Abbas",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Irland": [
+    {
+      "Region": "Dublin",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    }
+  ],
+  "Island": [
+    {
+      "Region": "Reykjavik",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    }
+  ],
+  "Jamaika": [
+    {
+      "Region": "Kingston",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Jordanien": [
+    {
+      "Region": "Aqaba",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    }
+  ],
+  "Kenia": [
+    {
+      "Region": "Mombasa",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Kambodscha": [
+    {
+      "Region": "Phnom Penh.",
+      "twentyFoot": 20,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Sihanoukville",
+      "twentyFoot": 20,
+      "fourtyFoot": 26
+    }
+  ],
+  "Südkorea": [
+    {
+      "Region": "Incheon",
+      "twentyFoot": 18,
+      "fourtyFoot": 24
+    }
+  ],
+  "Kuwait": [
+    {
+      "Region": "Shuaiba",
+      "twentyFoot": 22,
+      "fourtyFoot": 24
+    }
+  ],
+  "Libanon": [
+    {
+      "Region": "Beirut",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Sri Lanka": [
+    {
+      "Region": "Colombo",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    }
+  ],
+  "Lettland": [
+    {
+      "Region": "Riga",
+      "twentyFoot": 23,
+      "fourtyFoot": 26
+    }
+  ],
+  "Marokko": [
+    {
+      "Region": "Casablanca",
+      "twentyFoot": 21.5,
+      "fourtyFoot": 24
+    }
+  ],
+  "Mauritius": [
+    {
+      "Region": "Port Louis",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Mexiko": [
+    {
+      "Region": "Altamira",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Veracruz",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Malaysia": [
+    {
+      "Region": "Pasir Gudang",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Penang",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Port Klang",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    }
+  ],
+  "Nigeria": [
+    {
+      "Region": "Lagos/Tincan Island",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Nicaragua": [
+    {
+      "Region": "Corinto",
+      "twentyFoot": 20,
+      "fourtyFoot": 23.5
+    }
+  ],
+  "Neuseeland": [
+    {
+      "Region": "Auckland",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Wellington",
+      "twentyFoot": 22,
+      "fourtyFoot": 26
+    }
+  ],
+  "Oman": [
+    {
+      "Region": "Port Sultan Qaboos",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Panama": [
+    {
+      "Region": "Panama City",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Peru": [
+    {
+      "Region": "Callao",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Philippinen": [
+    {
+      "Region": "Manila",
+      "twentyFoot": 20,
+      "fourtyFoot": 26
+    }
+  ],
+  "Pakistan": [
+    {
+      "Region": "Karachi",
+      "twentyFoot": 20,
+      "fourtyFoot": 26
+    }
+  ],
+  "Puerto Rico": [
+    {
+      "Region": "San Juan, P.R.",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Russland": [
+    {
+      "Region": "St. Petersburg",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Vladivostok",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Saudi Arabien": [
+    {
+      "Region": "Dammam",
+      "twentyFoot": 21,
+      "fourtyFoot": 25.5
+    },
+    {
+      "Region": "Jeddah",
+      "twentyFoot": 21,
+      "fourtyFoot": 25.5
+    }
+  ],
+  "Singapur": [
+    {
+      "Region": "Singapur",
+      "twentyFoot": 21,
+      "fourtyFoot": 25
+    }
+  ],
+  "Senegal": [
+    {
+      "Region": "Dakar",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Syrien": [
+    {
+      "Region": "Lattakia",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Thailand": [
+    {
+      "Region": "Bangkok",
+      "twentyFoot": 20,
+      "fourtyFoot": 25.5
+    },
+    {
+      "Region": "Lat Krabang",
+      "twentyFoot": 20,
+      "fourtyFoot": 26
+    }
+  ],
+  "Tunesien": [
+    {
+      "Region": "Rades",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Sfax",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Tunis",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Türkei": [
+    {
+      "Region": "Aliaga",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Gebze",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Gemik",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Istanbul",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Izmir",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    },
+    {
+      "Region": "Mersin",
+      "twentyFoot": 24,
+      "fourtyFoot": 24
+    }
+  ],
+  "Taiwan": [
+    {
+      "Region": "Kaohsiung",
+      "twentyFoot": 21,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Keelung",
+      "twentyFoot": 21,
+      "fourtyFoot": 25
+    }
+  ],
+  "Tansania": [
+    {
+      "Region": "Dar-es-Salaam",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Uruguay": [
+    {
+      "Region": "Montevideo",
+      "twentyFoot": 22.5,
+      "fourtyFoot": 25
+    }
+  ],
+  "Venezuela": [
+    {
+      "Region": "La Guaira",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Puerto Cabello",
+      "twentyFoot": 25,
+      "fourtyFoot": 22
+    }
+  ],
+  "Amerikanische Jungferninseln": [
+    {
+      "Region": "St. Thomas",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    }
+  ],
+  "Vietnam": [
+    {
+      "Region": "Haiphong",
+      "twentyFoot": 21,
+      "fourtyFoot": 26
+    },
+    {
+      "Region": "Ho Chi Minh City",
+      "twentyFoot": 26,
+      "fourtyFoot": 21
+    }
+  ],
+  "Südafrika": [
+    {
+      "Region": "Cape Town",
+      "twentyFoot": 22,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Durban",
+      "twentyFoot": 25,
+      "fourtyFoot": 25
+    },
+    {
+      "Region": "Johannesburg",
+      "twentyFoot": 25,
+      "fourtyFoot": 22
+    },
+    {
+      "Region": "Port Elizabeth",
+      "twentyFoot": 25,
+      "fourtyFoot": 22
+    }
+  ]
+}
