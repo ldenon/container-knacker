@@ -64,7 +64,9 @@ stack_position = parser.read_placed_json_data(placed_file_path)
 # Currently there are stacks that are too high -> due to confusions with mm, cm 
 # this should be fixed -> when running the algorithm2d.py script separately it should work fine
 
-myStckHandler = stack_administrator(stacks=stack, stack_positions=stack_position)
+container_width = float(container_dim.width)
+container_length =float( container_dim.length)
+myStckHandler = stack_administrator(stacks=stack, stack_positions=stack_position, container_width=container_width, container_length=container_length)
 # myStckHandler.show_stacks()
 # myStckHandler.show_stack_positions()
 dict = myStckHandler.create_dict()
