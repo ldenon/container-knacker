@@ -3,7 +3,8 @@ import math
 
 
 class Objekt:
-    def __init__(self, name, form, params, hoehe, gewicht_kg):
+    def __init__(self, name, form, params, hoehe, gewicht_kg, id=None):
+        self.id = id
         self.name = name
         # transform the given height from cm to mm
         self.form = form  # 'Zylinder' oder 'Quader'

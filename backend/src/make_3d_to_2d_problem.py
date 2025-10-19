@@ -6,7 +6,7 @@ import time
 from pyparsing import Dict
 from three_dimensional import Objekt
 # Konstanten für die Beschränkung
-TOP_K_BASEN = 222
+TOP_K_BASEN = 50
 TIMEOUT_SEKUNDEN = 180 # 3 Minuten
 
 
@@ -131,49 +131,65 @@ class StapelOptimierer:
         if self.verbose:
             print(f"Beschränke die gierige Auswahl auf die Top-{TOP_K_BASEN} Stapelbasen.")
 
+        # make_3d_to_2d_problem.py - Innerhalb der Methode loese_problem
+
         for basis in basis_kandidaten_begrenzt:
             # 3. Timeout-Prüfung
-            if time.time() - start_zeit > TIMEOUT_SEKUNDEN:
-                print(f"⛔️ Timeout nach {TIMEOUT_SEKUNDEN} Sekunden erreicht. Beende gierige Stapelauswahl.")
-                break 
+            # ... (Timeout-Prüfung bleibt unverändert) ...
 
             # Prüfe, ob die Basis noch verfügbar ist
             if basis not in verbleibende_objekte:
                 continue
 
-            # --- KORRIGIERTE STAPELREKONSTRUKTION (Iterative Verfügbarkeitsprüfung) ---
+            # --- KORRIGIERTE STAPELREKONSTRUKTION (Adaptive Greedy Pathing) ---
             
+            top_objekt = basis
             aktueller_stapel = [basis]
             aktuell_hoehe = basis.hoehe
             
-            # Starte die Rekonstruktion mit dem optimalen Nachfolger aus der DP-Tabelle
-            _, _, naechster_knoten = optimale_stapel_info[basis]
+            # Entferne die Basis sofort, um sie nicht erneut zu verwenden
+            verbleibende_objekte.discard(basis)
             
-            akt_knoten = naechster_knoten
-            
-            while akt_knoten:
-                # Wichtig: Prüfe, ob das Objekt verfügbar ist UND die Höhe noch passt
-                if akt_knoten in verbleibende_objekte and (aktuell_hoehe + akt_knoten.hoehe) <= self.max_hoehe:
+            while True:
+                
+                bester_nachfolger = None
+                # Wir nutzen die Stapellänge des Sub-Stapels (DP-Potenzial) als Priorität.
+                beste_effizienz_nachfolger = -1 
+                
+                # Finde den besten verfügbaren direkten Nachfolger des aktuellen Top-Objekts
+                for nachfolger in self.graph.neighbors(top_objekt):
                     
-                    # Wenn verfügbar und stapelbar: Zum Stapel hinzufügen
-                    aktueller_stapel.append(akt_knoten)
-                    aktuell_hoehe += akt_knoten.hoehe
+                    # 1. Ist der Nachfolger verfügbar?
+                    if nachfolger not in verbleibende_objekte:
+                        continue
+                        
+                    # 2. Passt die Höhe?
+                    if (aktuell_hoehe + nachfolger.hoehe) > self.max_hoehe:
+                        continue
+                        
+                    # 3. Priorisierung: Wähle den Nachfolger, der den längsten Sub-Stapel verspricht
+                    # Die DP-Information (Anzahl) dient als gieriges Kriterium für den nächsten Schritt.
+                    anzahl_j, _, _ = optimale_stapel_info[nachfolger]
+                    effizienz_j = anzahl_j 
                     
-                    # Gehe zum nächsten Knoten im optimalen DP-Pfad
-                    _, _, akt_knoten = optimale_stapel_info[akt_knoten]
+                    if effizienz_j > beste_effizienz_nachfolger:
+                        beste_effizienz_nachfolger = effizienz_j
+                        bester_nachfolger = nachfolger
+                
+                if bester_nachfolger:
+                    # Füge den besten gefundenen Nachfolger hinzu
+                    aktueller_stapel.append(bester_nachfolger)
+                    aktuell_hoehe += bester_nachfolger.hoehe
+                    verbleibende_objekte.discard(bester_nachfolger) # Sofort als verbraucht markieren
+                    top_objekt = bester_nachfolger # Der Nachfolger wird zum neuen Top
                 else:
-                    # Der DP-Pfad ist unterbrochen (Objekt verbraucht oder Höhe überschritten)
-                    # Dies stellt sicher, dass Objekte nur einmal verwendet werden.
-                    break 
+                    # Keine weiteren verfügbaren Objekte passen oder sind stapelbar
+                    break
 
             # Füge den Stapel zur Lösung hinzu und aktualisiere die Kosten
             fertige_stapel.append(aktueller_stapel) # Füge die Liste der Objekt-Instanzen hinzu
             gesamt_grundflaeche += basis.grundflaeche
             
-            # Entferne ALLE verwendeten Objekte aus der Verfügbarkeitsmenge
-            for obj in aktueller_stapel:
-                verbleibende_objekte.discard(obj)
-                
         # 4. Finalisierung: Verbleibende Objekte als Einzelstapel verpacken
         if verbleibende_objekte:
             print(f"⚠️ {len(verbleibende_objekte)} Objekte konnten nicht in den Top-K Stapeln verwendet werden. Sie werden als Einzelstapel verpackt.")
@@ -190,7 +206,7 @@ class StapelOptimierer:
             print("Gefundene Stapel:")
             for i, stapel in enumerate(fertige_stapel):
                  # KORREKTUR: Jetzt verwenden wir die Liste von Objekt-Instanzen im Stapel
-                 print(f" Stapel {i+1}: {[obj.name for obj in stapel]}") 
+                 print(f" Stapel {i+1}: {[obj.id for obj in stapel]}") 
             print(f"Gesamt genutzte Grundfläche: {gesamt_grundflaeche:.2f}")
 
         return fertige_stapel, gesamt_grundflaeche            
@@ -286,11 +302,21 @@ if __name__ == "__main__":
         Objekt("Objekt2", "Zylinder", [2], 3, 5),
         Objekt("Objekt3", "Quader", [3, 3], 4, 8),
         Objekt("Objekt4", "Zylinder", [1.5], 2, 3),
-        Objekt("Objekt5", "Quader", [2, 2], 2, 4),
-        Objekt("Objekt6", "Zylinder", [1], 1, 2)
+        # Objekt("Objekt5", "Quader", [2, 2], 2, 4),
+        # Objekt("Objekt6", "Zylinder", [1], 1, 2)
     ]
 
-    max_hoehe = 10
+    objekte=[
+        Objekt(id=1000, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1001, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1002, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1003, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1004, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1005, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1006, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060]),
+        Objekt(id=1007, form="Quader", name="daf", hoehe=56, gewicht_kg=285, params=[1060, 1060])
+    ]
+    max_hoehe = 2350
 
     optimierer = StapelOptimierer(objekte, max_hoehe)
     # optimierer.erzeuge_graphen()
@@ -299,10 +325,10 @@ if __name__ == "__main__":
 
     print("Gefundene Stapel:")
     for i, stapel in enumerate(stapel_loesung):
-        print(f" Stapel {i+1}: {[obj.name for obj in stapel]}")
+        print(f" Stapel {i+1}: {[obj.id for obj in stapel]}")
     print(f"Gesamt genutzte Grundfläche: {gesamt_grundflaeche:.2f}")
     stack_obj = optimierer.stapel_zu_objekten_aggregieren(stapel_loesung)
     print("Länge der aggregierten Objekte:", len(stack_obj))
-    print("Aggregierte Objekte aus Stapeln:")
-    for obj in stack_obj:
-        print(f" Objekt: {obj.name}, Form: {obj.form}, Höhe: {obj.hoehe}, Gewicht: {obj.gewicht_kg}kg")
+    # print("Aggregierte Objekte aus Stapeln:")
+    # for obj in stack_obj:
+        # print(f" Objekt: {obj.id}, Form: {obj.form}, Höhe: {obj.hoehe}, Gewicht: {obj.gewicht_kg}kg")

@@ -58,39 +58,39 @@ class JSONParser:
         print("Number of objects in JSON:", len(objects_data))
         all_objects = []
         for obj in objects_data:
-            quantity = obj.get("quantity", 1)
             form = obj.get("form", {})
-            for i in range(quantity):
-                obj_height = form.get("height", 0)
-                obj_name = obj.get("product_name", "Unnamed")
-                obj_name = f"{obj_name}_{i+1}"
-                obj_type = form.get("type", "rectangle")
-                obj_weight = obj.get("weight_kg", 0)
-                objekt = None
-                if str.__eq__(str(obj_type), "rectangle"):
-                    # make list of params
-                    params = [form.get("length", 0), form.get("width", 0)]
-                    objekt = Objekt(
+            obj_height = form.get("height", 0)
+            obj_name = obj.get("product_name", "Unnamed")
+            obj_id = obj.get("id", 0)
+            obj_type = form.get("type", "rectangle")
+            obj_weight = obj.get("weight_kg", 0)
+            objekt = None
+            if str.__eq__(str(obj_type), "rectangle"):
+                # make list of params
+                params = [form.get("length", 0), form.get("width", 0)]
+                objekt = Objekt(
+                    id =obj_id,
                     name=obj_name,
                     form="Quader",
                     params=params,
                     hoehe=obj_height,
                     gewicht_kg=obj_weight,
-                    )
-                    all_objects.append(objekt)
-                elif str.__eq__(str(obj_type), "cylinder"):
-                    radius = form.get("radius", 0)
-                    params = [radius]
-                    objekt = Objekt(
+                )
+                all_objects.append(objekt)
+            elif str.__eq__(str(obj_type), "cylinder"):
+                radius = form.get("radius", 0)
+                params = [radius]
+                objekt = Objekt(
+                    id=obj_id,
                     name=obj_name,
                     form="Zylinder",
                     params=params,
                     hoehe=obj_height,
                     gewicht_kg=obj_weight,
-                )
-                    all_objects.append(objekt)
-                else:
-                    raise ValueError(f"Unknown object type: Check JSON input for object", obj_type)
+            )
+                all_objects.append(objekt)
+            else:
+                raise ValueError(f"Unknown object type: Check JSON input for object", obj_type)
 
         return all_objects
 
@@ -233,17 +233,21 @@ class JSONParser:
         Dieses Format kann direkt an create_stack_result_json als 
         'aggregated_stack_positions' übergeben werden.
         """
-        try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-        except Exception as e:
-            print(f"Fehler beim Einlesen der Datei {file_path}: {e}")
-            return []
-
-        # Die aggregierten Stapel (inkl. Placement) sind unter dem Schlüssel 'objects' gespeichert.
-        aggregated_stacks_with_placement = data.get("objects", [])
+        with open(file_path, "r", encoding="utf-8") as f:
+            json_data =  json.load(f)
         
-        return aggregated_stacks_with_placement
+        objects = json_data.get("objects", [])
+        return objects
+
+
+    def create_jsn_for_3d(self, stack_dir):
+        container_dim = self.get_container_dimensions()
+        final_dir = {
+            "container": {"height": container_dim.height, "width": container_dim.width, "length": container_dim.length, "max_weight": container_dim.max_weight},
+            "objects": stack_dir
+        }
+
+        return final_dir
 
 
 

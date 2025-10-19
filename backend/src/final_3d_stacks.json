@@ -1,0 +1,217 @@
+{
+    "container": {
+        "height": 2350,
+        "width": 2330,
+        "length": 11998,
+        "max_weight": 25000
+    },
+    "objects": [
+        {
+            "name": "Stapel_1",
+            "objects": [
+                {
+                    "id": 1000,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 0.0,
+                        "y": 1060.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "id": 1001,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1000,
+                    "position": {
+                        "x": 0.0,
+                        "y": 1060.0,
+                        "z": 560
+                    }
+                },
+                {
+                    "id": 1002,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1001,
+                    "position": {
+                        "x": 0.0,
+                        "y": 1060.0,
+                        "z": 1120
+                    }
+                },
+                {
+                    "id": 1003,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1002,
+                    "position": {
+                        "x": 0.0,
+                        "y": 1060.0,
+                        "z": 1680
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_2",
+            "objects": [
+                {
+                    "id": 1004,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "id": 1005,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1004,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 560
+                    }
+                },
+                {
+                    "id": 1006,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1005,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1120
+                    }
+                },
+                {
+                    "id": 1007,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1006,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1680
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_3",
+            "objects": [
+                {
+                    "id": 1008,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 1060.0,
+                        "y": 0.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "id": 1009,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1008,
+                    "position": {
+                        "x": 1060.0,
+                        "y": 0.0,
+                        "z": 560
+                    }
+                },
+                {
+                    "id": 1010,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1009,
+                    "position": {
+                        "x": 1060.0,
+                        "y": 0.0,
+                        "z": 1120
+                    }
+                },
+                {
+                    "id": 1011,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1010,
+                    "position": {
+                        "x": 1060.0,
+                        "y": 0.0,
+                        "z": 1680
+                    }
+                }
+            ]
+        }
+    ]
+}
