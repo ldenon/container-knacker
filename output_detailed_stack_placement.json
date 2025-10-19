@@ -1,0 +1,329 @@
+{
+    "Container": {
+        "height": 2350,
+        "width": 2330,
+        "length": 5867,
+        "max_weight": 28200
+    },
+    "Stacks": {
+        "Stapel_1": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 191.42,
+                    "y": 2010.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "cylinder",
+                    "height": 6000,
+                    "radius": 50
+                },
+                "gewicht_kg": 150,
+                "name": "Stahlrohre 6m_1"
+            }
+        ],
+        "Stapel_2": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 2000.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 10,
+                    "width": 1200,
+                    "height": 2000
+                },
+                "gewicht_kg": 80,
+                "name": "Sicherheitsglas-Platte_1"
+            }
+        ],
+        "Stapel_3": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 291.42,
+                    "y": 2010.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 200,
+                    "width": 250,
+                    "height": 150
+                },
+                "gewicht_kg": 5,
+                "name": "Sensoren-Set_1"
+            }
+        ],
+        "Stapel_4": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 2010.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "cylinder",
+                    "height": 600,
+                    "radius": 100
+                },
+                "gewicht_kg": 15,
+                "name": "Feuerlöscher_1"
+            }
+        ],
+        "Stapel_5": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 541.42,
+                    "y": 2010.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 250,
+                    "width": 300,
+                    "height": 400
+                },
+                "gewicht_kg": 20,
+                "name": "Getriebeöl Kanister_1"
+            }
+        ],
+        "Stapel_6": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 2210.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 300,
+                    "width": 400,
+                    "height": 200
+                },
+                "gewicht_kg": 25,
+                "name": "Kiste mit Schrauben_1"
+            }
+        ],
+        "Stapel_7": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 800.0,
+                    "y": 2510.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 500,
+                    "width": 500,
+                    "height": 500
+                },
+                "gewicht_kg": 15,
+                "name": "Dichtungsringe Box_1"
+            }
+        ],
+        "Stapel_8": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 841.42,
+                    "y": 2010.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 500,
+                    "width": 700,
+                    "height": 600
+                },
+                "gewicht_kg": 250,
+                "name": "Hydraulik-Pumpe_1"
+            }
+        ],
+        "Stapel_9": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 1300.0,
+                    "y": 2700.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "cylinder",
+                    "height": 950,
+                    "radius": 300
+                },
+                "gewicht_kg": 220,
+                "name": "Fass Kühlmittel_1"
+            }
+        ],
+        "Stapel_10": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 2510.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "cylinder",
+                    "height": 800,
+                    "radius": 400
+                },
+                "gewicht_kg": 350,
+                "name": "Kabeltrommel_1"
+            }
+        ],
+        "Stapel_11": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 4710.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 900,
+                    "width": 700,
+                    "height": 800
+                },
+                "gewicht_kg": 1200,
+                "name": "Ersatzmotor_1"
+            }
+        ],
+        "Stapel_12": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 1541.42,
+                    "y": 2000.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 700,
+                    "width": 700,
+                    "height": 1100
+                },
+                "gewicht_kg": 18,
+                "name": "Bürostuhl_1"
+            }
+        ],
+        "Stapel_14": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 3310.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 1100,
+                    "width": 1100,
+                    "height": 1800
+                },
+                "gewicht_kg": 730,
+                "name": "Lüftungseinheit_1"
+            }
+        ],
+        "Stapel_15": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": -170.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 800,
+                    "width": 1200,
+                    "height": 1000
+                },
+                "gewicht_kg": 600,
+                "name": "Palette mit Filtern_1"
+            }
+        ],
+        "Stapel_17": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 3910.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 2500,
+                    "width": 2000,
+                    "height": 1500
+                },
+                "gewicht_kg": 3500,
+                "name": "Hauptmaschine Basis_1"
+            }
+        ],
+        "Stapel_19": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 700.0,
+                    "y": 4710.0,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 100,
+                    "width": 3000,
+                    "height": 1800
+                },
+                "gewicht_kg": 450,
+                "name": "Montagerahmen_1"
+            }
+        ],
+        "Stapel_20": [
+            {
+                "id": 1,
+                "stack_level": 0,
+                "position": {
+                    "x": 1900.03,
+                    "y": 2700.01,
+                    "z": 0.0
+                },
+                "form": {
+                    "type": "rectangle",
+                    "length": 1500,
+                    "width": 600,
+                    "height": 700
+                },
+                "gewicht_kg": 180,
+                "name": "Werkzeugkiste groß_1"
+            }
+        ]
+    }
+}
