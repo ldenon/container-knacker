@@ -59,8 +59,8 @@ class stack_administrator:
                 }
         translation_x = self.container_width / 2
         translation_y = self.container_length / 2
-        position["x"] -= translation_x
-        position["y"] -= translation_y
+        position["x"] += translation_x
+        position["y"] += translation_y
         return position
     
     def get_width_length_for_rotation(self, obj, rotation):
