@@ -41,12 +41,20 @@ class stack_administrator:
         for i, pos in enumerate(self.stack_positions):
             print(f"Stack {i+1}: Position: {pos}")
 
-    def get_obj_pos_in_stack(self, ground_x, ground_y, z):
-        position = {
-                "x": ground_x,
+    def get_obj_pos_in_stack(self, ground_x, ground_y,form,width, z):
+        # if quader then adjust position
+        if form == "Quader":
+            position = {
+                "x": ground_x+width/2,
                 "y": ground_y,
                 "z": z
             }
+        else:
+            position = {
+                    "x": ground_x,
+                    "y": ground_y,
+                    "z": z
+                }
         return position
     
     def get_width_length_for_rotation(self, obj, rotation):
@@ -80,6 +88,8 @@ class stack_administrator:
                     position = self.get_obj_pos_in_stack(
                         ground_x=ground_position_x,
                         ground_y=ground_position_y,
+                        form=ground_form,
+                        width=self.stacks[i][0].abmessungen.get('breite',0),
                         z=0,
                     )
                 else:
@@ -87,6 +97,8 @@ class stack_administrator:
                     position = self.get_obj_pos_in_stack(
                         ground_x=ground_position_x,
                         ground_y=ground_position_y,
+                        form=ground_form,
+                        width=self.stacks[i][0].abmessungen.get('breite',0),
                         z=sum(o.hoehe for o in self.stacks[i][:j]),
                     )
                     # stack level is id of object in stack at position j-1
