@@ -143,7 +143,10 @@ class JSONParser:
 
         dir_gesamt = {"container": container_dir, "objects": objects_list}
         # convert to json and write to file
-        self.dictionary_to_json_file(dir_gesamt, "output_stack.json")
+        path = os.path.dirname(__file__)
+        output_file_path = os.path.join(path, "meine_Bestellung.json")
+        self.dictionary_to_json_file(dir_gesamt, output_file_path)
+
 
     def get_stack_position(self,path)->dict:
         """
@@ -221,115 +224,6 @@ class JSONParser:
             # ID des Objekts direkt darunter (für stack_level)
             id_unten = None 
             
-            # Die ID (integer) muss aus dem Namen extrahiert werden (z.B. "Produkt_1" -> 1)
-            def get_obj_id(obj_name):
-                try:
-                    return int(obj_name.split('_')[-1])
-                except ValueError:
-                    return hash(obj_name) % 1000 # Fallback-ID
-
-            for j, obj in enumerate(stack):
-                obj_id = get_obj_id(obj.name)
-                
-                # 1. Stapel-Level
-                if j == 0:
-                    # Basisobjekt: stack_level = 0
-                    stack_level_id = 0
-                else:
-                    # Objekte darüber: stack_level = ID des darunterliegenden Objekts
-                    stack_level_id = id_unten
-                    
-                # 2. Position (x, y, z)
-                
-                # Z-Koordinate (Höhenakkumulation)
-                position_z = current_z_offset
-                
-                # X, Y Koordinate (Zentrierung)
-                # Die Stapelbasis (j=0) übernimmt die x/y-Position des aggregierten Stacks.
-                # Objekte darüber müssen zentriert werden. Da alle Objekte zentralisiert gestapelt 
-                # wurden, ist die Position des *Mittelpunkts* für alle Objekte die gleiche,
-                # WENN die Position x/y des Aggregierten Objekts der *unteren linken Ecke* entspricht.
-                
-                # Annahme: Die "position" im Input-JSON ist die UNTERE LINKE ECKE der Basis.
-                
-                # Da die Abmessungen des Objekts 'unten' gleich der Abmessung des Stapels sind 
-                # (oder größer, bei gemischten Stapeln), und alle zentriert sind, 
-                # behalten alle Objekte die *Mittelpunkts-Position* bei.
-                
-                # Position des Objekts soll die untere linke Ecke sein.
-                
-                # Berechne die Abmessungen nach Rotation für die Positionsberechnung
-                rotated_dims = self._get_rotated_dimensions(obj, rotation_z)
-                obj_len = rotated_dims['length']
-                obj_wid = rotated_dims['width']
-                
-                # Zentrierungslogik:
-                # Da alle Objekte zentriert sind und die Basisposition die untere linke Ecke der Basis ist, 
-                # muss die Position des aktuellen Objekts (j) so angepasst werden, dass:
-                # (position_x + obj_len/2) = (base_position_x + basis_len/2)
-                basis_objekt = None
-                if j == 0:
-                    # Basis: Nimmt die Platzierung des Aggregierten Stapels an.
-                    position_x = base_position_x
-                    position_y = base_position_y
-                    basis_objekt = obj
-                    
-                else:
-                    # Objekte darüber: Zentriert auf der Basis.
-                    # Mittelpunkt des aggregierten Stapels:
-                    basis_dims = self._get_rotated_dimensions(basis_objekt, rotation_z)
-                    basis_len = basis_dims['length']
-                    basis_wid = basis_dims['width']
-                    
-                    center_x = base_position_x + basis_len / 2
-                    center_y = base_position_y + basis_wid / 2
-                    
-                    # Position des aktuellen Objekts (untere linke Ecke):
-                    position_x = center_x - obj_len / 2
-                    position_y = center_y - obj_wid / 2
-
-                # 3. Form-Daten
-                form_dir = {
-                    "type": "rectangle" if obj.form == "Quader" else "cylinder",
-                    "length": obj_len,
-                    "width": obj_wid,
-                    "height": obj.hoehe,
-                }
-                
-                # Bei Zylinder-Form muss der Radius statt Länge/Breite verwendet werden
-                if obj.form == "Zylinder":
-                    form_dir['radius'] = obj.abmessungen['radius']
-                    # Entferne Länge/Breite, die nur zur internen Berechnung dienten
-                    del form_dir['length']
-                    del form_dir['width']
-
-
-                # 4. Konstruktion des Einzelobjekt-Dictionary
-                obj_dir = {
-                    "id": obj_id,
-                    "stack_level": stack_level_id,
-                    "position": {"x": position_x, "y": position_y, "z": position_z},
-                    "form": form_dir,
-                    "gewicht_kg": obj.gewicht_kg,
-                    "name": obj.name # Name zur besseren Debug-Fähigkeit
-                }
-                
-                stack_objects.append(obj_dir)
-                
-                # Aktualisiere für die nächste Iteration
-                current_z_offset += obj.hoehe
-                id_unten = obj_id # Das aktuelle Objekt wird zur ID_unten für das nächste
-            
-            stacks_output[stack_name] = stack_objects
-
-        # Erstellung des Gesamt-JSON-Dictionary
-        dir_gesamt = {
-            "Container": container_dir,
-            "Stacks": stacks_output
-        }
-        
-        # Schreibe in JSON-Datei
-        self.dictionary_to_json_file(dir_gesamt, "output_detailed_stack_placement.json")
 
     def read_placed_json_data(self, file_path: str) -> List[Dict]:
         """

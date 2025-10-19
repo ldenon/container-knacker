@@ -6,7 +6,7 @@ import time
 from pyparsing import Dict
 from three_dimensional import Objekt
 # Konstanten für die Beschränkung
-TOP_K_BASEN = 12
+TOP_K_BASEN = 222
 TIMEOUT_SEKUNDEN = 180 # 3 Minuten
 
 

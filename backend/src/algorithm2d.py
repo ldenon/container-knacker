@@ -643,7 +643,6 @@ def update_and_save_order_json(original_data_root, final_solution_numpy, id_map,
         print(f"FEHLER beim Speichern der finalen JSON-Datei: {e}")
 # -------------------- HAUPTPROGRAMM (Headless) --------------------
 if __name__ == "__main__":
-
     multiprocessing.freeze_support()
     num_cpus = multiprocessing.cpu_count()
 
