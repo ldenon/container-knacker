@@ -1,6 +1,6 @@
 
 class stack_administrator:
-    def __init__(self, stacks, stack_positions):
+    def __init__(self, stacks, stack_positions, container_width=1200, container_length=3000):
         """
         Create stack dictionary from stacks and their positions.
         Objects on the ground have stack_level -1!
@@ -21,6 +21,8 @@ class stack_administrator:
         """
         self.stacks = stacks
         self.stack_positions = stack_positions
+        self.container_width = container_width
+        self.container_length = container_length
     
     def show_stacks(self):
         """show the first stack"""
@@ -41,12 +43,12 @@ class stack_administrator:
         for i, pos in enumerate(self.stack_positions):
             print(f"Stack {i+1}: Position: {pos}")
 
-    def get_obj_pos_in_stack(self, ground_x, ground_y,form,width, z):
+    def get_obj_pos_in_stack(self, ground_x, ground_y,form,width, height, z):
         # if quader then adjust position
         if form == "Quader":
             position = {
                 "x": ground_x+width/2,
-                "y": ground_y,
+                "y": ground_y+height/2,
                 "z": z
             }
         else:
@@ -55,6 +57,10 @@ class stack_administrator:
                     "y": ground_y,
                     "z": z
                 }
+        translation_x = self.container_width / 2
+        translation_y = self.container_length / 2
+        position["x"] -= translation_x
+        position["y"] -= translation_y
         return position
     
     def get_width_length_for_rotation(self, obj, rotation):
@@ -90,6 +96,7 @@ class stack_administrator:
                         ground_y=ground_position_y,
                         form=ground_form,
                         width=self.stacks[i][0].abmessungen.get('breite',0),
+                        height=self.stacks[i][0].abmessungen.get('laenge',0),
                         z=0,
                     )
                 else:
@@ -99,6 +106,7 @@ class stack_administrator:
                         ground_y=ground_position_y,
                         form=ground_form,
                         width=self.stacks[i][0].abmessungen.get('breite',0),
+                        height=self.stacks[i][0].abmessungen.get('laenge',0),
                         z=sum(o.hoehe for o in self.stacks[i][:j]),
                     )
                     # stack level is id of object in stack at position j-1
