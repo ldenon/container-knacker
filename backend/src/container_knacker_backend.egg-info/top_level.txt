@@ -1,6 +1,9 @@
 __init__
+algorithm2d
 json_parser
+main
 make_3d_to_2d_problem
+order_parser
 three_dimensional
 two_dim_rect_and_circle_genetic_alg
 two_dim_rect_genetic_alg

@@ -5,8 +5,9 @@ import math
 class Objekt:
     def __init__(self, name, form, params, hoehe, gewicht_kg):
         self.name = name
+        # transform the given height from cm to mm
         self.form = form  # 'Zylinder' oder 'Quader'
-        self.hoehe = hoehe
+        self.hoehe = hoehe*10
         self.grundflaeche, self.abmessungen = self._berechne_grundflaeche(params)
         self.gewicht_kg = gewicht_kg
 
@@ -14,15 +15,15 @@ class Objekt:
         if self.form == 'Zylinder':
             # params = [radius]
             radius = params[0]
-            flaeche = math.pi * radius**2
+            flaeche = math.pi * (radius*10)**2
             # Abmessungen für die Stapelprüfung (Radius)
             return flaeche, {'radius': radius}
         elif self.form == 'Quader':
             # params = [laenge, breite]
             laenge, breite = params
-            flaeche = laenge * breite
+            flaeche = laenge * breite*100
             # Abmessungen für die Stapelprüfung (Seiten)
-            return flaeche, {'laenge': laenge, 'breite': breite}
+            return flaeche, {'laenge': laenge*10, 'breite': breite*10}
         else:
             print("Unknown object type in grundflaeche calculation")
         return 0, {}
