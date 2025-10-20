@@ -4,7 +4,7 @@
         "width": 2330,
         "length": 11998,
         "max_weight": 25000,
-        "calculated_total_weight_kg": 11400.0
+        "calculated_total_weight_kg": 18439.2
     },
     "objects": [
         {
@@ -20,8 +20,8 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1060.0,
-                    "y": 3180.0,
+                    "x": 0.0,
+                    "y": 7420.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -44,8 +44,8 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1060.0,
-                    "y": 1060.0,
+                    "x": 0.0,
+                    "y": 6360.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -68,8 +68,8 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 1060.0,
-                    "y": 0.0,
+                    "x": 0.0,
+                    "y": 8480.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -93,7 +93,7 @@
                 "stack_level": 0,
                 "position": {
                     "x": 1060.0,
-                    "y": 4240.0,
+                    "y": 1060.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -116,8 +116,8 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 0.0,
-                    "y": 2120.0,
+                    "x": 1060.0,
+                    "y": 6360.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -140,8 +140,8 @@
             "placement": {
                 "stack_level": 0,
                 "position": {
-                    "x": 0.0,
-                    "y": 1060.0,
+                    "x": 1060.0,
+                    "y": 8480.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -165,7 +165,7 @@
                 "stack_level": 0,
                 "position": {
                     "x": 0.0,
-                    "y": 3180.0,
+                    "y": 1060.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -177,6 +177,30 @@
         },
         {
             "name": "Stapel_8",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 1060.0,
+                    "y": 7420.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_9",
             "form": "Quader",
             "hoehe": 22400,
             "gewicht_kg": 1140,
@@ -200,7 +224,7 @@
             }
         },
         {
-            "name": "Stapel_9",
+            "name": "Stapel_10",
             "form": "Quader",
             "hoehe": 22400,
             "gewicht_kg": 1140,
@@ -213,7 +237,7 @@
                 "stack_level": 0,
                 "position": {
                     "x": 1060.0,
-                    "y": 2120.0,
+                    "y": 5300.0,
                     "z": 0.0
                 },
                 "rotation": {
@@ -224,7 +248,55 @@
             }
         },
         {
-            "name": "Stapel_10",
+            "name": "Stapel_11",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 1060.0,
+                    "y": 3180.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_12",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 1060.0,
+                    "y": 4240.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_13",
             "form": "Quader",
             "hoehe": 22400,
             "gewicht_kg": 1140,
@@ -238,6 +310,198 @@
                 "position": {
                     "x": 0.0,
                     "y": 4240.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_14",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 2120.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_15",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 5300.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_16",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 1060.0,
+                    "y": 9540.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_17",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 10600.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_18",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 1060.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_19",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 3180.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_20",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 0.0,
+                    "y": 9540.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x_axis": 0,
+                    "y_axis": 0,
+                    "z_axis": 0
+                }
+            }
+        },
+        {
+            "name": "Stapel_21",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            },
+            "placement": {
+                "stack_level": 0,
+                "position": {
+                    "x": 1060.0,
+                    "y": 2120.0,
                     "z": 0.0
                 },
                 "rotation": {

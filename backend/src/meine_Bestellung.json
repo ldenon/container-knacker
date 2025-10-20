@@ -115,6 +115,127 @@
                 "laenge": 1060,
                 "breite": 1060
             }
+        },
+        {
+            "name": "Stapel_11",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_12",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_13",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_14",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_15",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_16",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_17",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_18",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_19",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_20",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_21",
+            "form": "Quader",
+            "hoehe": 8000,
+            "gewicht_kg": 452.4,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
         }
     ]
 }

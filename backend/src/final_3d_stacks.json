@@ -20,8 +20,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": 425.0,
-                        "y": -2289.0,
+                        "x": -635.0,
+                        "y": 1951.0,
                         "z": 0
                     }
                 },
@@ -36,8 +36,8 @@
                     "weight_kg": 285,
                     "stack_level": 1000,
                     "position": {
-                        "x": 425.0,
-                        "y": -2289.0,
+                        "x": -635.0,
+                        "y": 1951.0,
                         "z": 560
                     }
                 },
@@ -52,8 +52,8 @@
                     "weight_kg": 285,
                     "stack_level": 1001,
                     "position": {
-                        "x": 425.0,
-                        "y": -2289.0,
+                        "x": -635.0,
+                        "y": 1951.0,
                         "z": 1120
                     }
                 },
@@ -68,8 +68,8 @@
                     "weight_kg": 285,
                     "stack_level": 1002,
                     "position": {
-                        "x": 425.0,
-                        "y": -2289.0,
+                        "x": -635.0,
+                        "y": 1951.0,
                         "z": 1680
                     }
                 }
@@ -89,8 +89,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": 425.0,
-                        "y": -4409.0,
+                        "x": -635.0,
+                        "y": 891.0,
                         "z": 0
                     }
                 },
@@ -105,8 +105,8 @@
                     "weight_kg": 285,
                     "stack_level": 1004,
                     "position": {
-                        "x": 425.0,
-                        "y": -4409.0,
+                        "x": -635.0,
+                        "y": 891.0,
                         "z": 560
                     }
                 },
@@ -121,8 +121,8 @@
                     "weight_kg": 285,
                     "stack_level": 1005,
                     "position": {
-                        "x": 425.0,
-                        "y": -4409.0,
+                        "x": -635.0,
+                        "y": 891.0,
                         "z": 1120
                     }
                 },
@@ -137,8 +137,8 @@
                     "weight_kg": 285,
                     "stack_level": 1006,
                     "position": {
-                        "x": 425.0,
-                        "y": -4409.0,
+                        "x": -635.0,
+                        "y": 891.0,
                         "z": 1680
                     }
                 }
@@ -158,8 +158,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": 425.0,
-                        "y": -5469.0,
+                        "x": -635.0,
+                        "y": 3011.0,
                         "z": 0
                     }
                 },
@@ -174,8 +174,8 @@
                     "weight_kg": 285,
                     "stack_level": 1008,
                     "position": {
-                        "x": 425.0,
-                        "y": -5469.0,
+                        "x": -635.0,
+                        "y": 3011.0,
                         "z": 560
                     }
                 },
@@ -190,8 +190,8 @@
                     "weight_kg": 285,
                     "stack_level": 1009,
                     "position": {
-                        "x": 425.0,
-                        "y": -5469.0,
+                        "x": -635.0,
+                        "y": 3011.0,
                         "z": 1120
                     }
                 },
@@ -206,8 +206,8 @@
                     "weight_kg": 285,
                     "stack_level": 1010,
                     "position": {
-                        "x": 425.0,
-                        "y": -5469.0,
+                        "x": -635.0,
+                        "y": 3011.0,
                         "z": 1680
                     }
                 }
@@ -228,7 +228,7 @@
                     "stack_level": -1,
                     "position": {
                         "x": 425.0,
-                        "y": -1229.0,
+                        "y": -4409.0,
                         "z": 0
                     }
                 },
@@ -244,7 +244,7 @@
                     "stack_level": 1012,
                     "position": {
                         "x": 425.0,
-                        "y": -1229.0,
+                        "y": -4409.0,
                         "z": 560
                     }
                 },
@@ -260,7 +260,7 @@
                     "stack_level": 1013,
                     "position": {
                         "x": 425.0,
-                        "y": -1229.0,
+                        "y": -4409.0,
                         "z": 1120
                     }
                 },
@@ -276,7 +276,7 @@
                     "stack_level": 1014,
                     "position": {
                         "x": 425.0,
-                        "y": -1229.0,
+                        "y": -4409.0,
                         "z": 1680
                     }
                 }
@@ -296,8 +296,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": -635.0,
-                        "y": -3349.0,
+                        "x": 425.0,
+                        "y": 891.0,
                         "z": 0
                     }
                 },
@@ -312,8 +312,8 @@
                     "weight_kg": 285,
                     "stack_level": 1016,
                     "position": {
-                        "x": -635.0,
-                        "y": -3349.0,
+                        "x": 425.0,
+                        "y": 891.0,
                         "z": 560
                     }
                 },
@@ -328,8 +328,8 @@
                     "weight_kg": 285,
                     "stack_level": 1017,
                     "position": {
-                        "x": -635.0,
-                        "y": -3349.0,
+                        "x": 425.0,
+                        "y": 891.0,
                         "z": 1120
                     }
                 },
@@ -344,8 +344,8 @@
                     "weight_kg": 285,
                     "stack_level": 1018,
                     "position": {
-                        "x": -635.0,
-                        "y": -3349.0,
+                        "x": 425.0,
+                        "y": 891.0,
                         "z": 1680
                     }
                 }
@@ -365,8 +365,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": -635.0,
-                        "y": -4409.0,
+                        "x": 425.0,
+                        "y": 3011.0,
                         "z": 0
                     }
                 },
@@ -381,8 +381,8 @@
                     "weight_kg": 285,
                     "stack_level": 1020,
                     "position": {
-                        "x": -635.0,
-                        "y": -4409.0,
+                        "x": 425.0,
+                        "y": 3011.0,
                         "z": 560
                     }
                 },
@@ -397,8 +397,8 @@
                     "weight_kg": 285,
                     "stack_level": 1021,
                     "position": {
-                        "x": -635.0,
-                        "y": -4409.0,
+                        "x": 425.0,
+                        "y": 3011.0,
                         "z": 1120
                     }
                 },
@@ -413,8 +413,8 @@
                     "weight_kg": 285,
                     "stack_level": 1022,
                     "position": {
-                        "x": -635.0,
-                        "y": -4409.0,
+                        "x": 425.0,
+                        "y": 3011.0,
                         "z": 1680
                     }
                 }
@@ -435,7 +435,7 @@
                     "stack_level": -1,
                     "position": {
                         "x": -635.0,
-                        "y": -2289.0,
+                        "y": -4409.0,
                         "z": 0
                     }
                 },
@@ -451,7 +451,7 @@
                     "stack_level": 1024,
                     "position": {
                         "x": -635.0,
-                        "y": -2289.0,
+                        "y": -4409.0,
                         "z": 560
                     }
                 },
@@ -467,7 +467,7 @@
                     "stack_level": 1025,
                     "position": {
                         "x": -635.0,
-                        "y": -2289.0,
+                        "y": -4409.0,
                         "z": 1120
                     }
                 },
@@ -483,7 +483,7 @@
                     "stack_level": 1026,
                     "position": {
                         "x": -635.0,
-                        "y": -2289.0,
+                        "y": -4409.0,
                         "z": 1680
                     }
                 }
@@ -503,8 +503,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": -635.0,
-                        "y": -5469.0,
+                        "x": 425.0,
+                        "y": 1951.0,
                         "z": 0
                     }
                 },
@@ -519,8 +519,8 @@
                     "weight_kg": 285,
                     "stack_level": 1028,
                     "position": {
-                        "x": -635.0,
-                        "y": -5469.0,
+                        "x": 425.0,
+                        "y": 1951.0,
                         "z": 560
                     }
                 },
@@ -535,8 +535,8 @@
                     "weight_kg": 285,
                     "stack_level": 1029,
                     "position": {
-                        "x": -635.0,
-                        "y": -5469.0,
+                        "x": 425.0,
+                        "y": 1951.0,
                         "z": 1120
                     }
                 },
@@ -551,8 +551,8 @@
                     "weight_kg": 285,
                     "stack_level": 1030,
                     "position": {
-                        "x": -635.0,
-                        "y": -5469.0,
+                        "x": 425.0,
+                        "y": 1951.0,
                         "z": 1680
                     }
                 }
@@ -572,8 +572,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": 425.0,
-                        "y": -3349.0,
+                        "x": -635.0,
+                        "y": -5469.0,
                         "z": 0
                     }
                 },
@@ -588,8 +588,8 @@
                     "weight_kg": 285,
                     "stack_level": 1032,
                     "position": {
-                        "x": 425.0,
-                        "y": -3349.0,
+                        "x": -635.0,
+                        "y": -5469.0,
                         "z": 560
                     }
                 },
@@ -604,8 +604,8 @@
                     "weight_kg": 285,
                     "stack_level": 1033,
                     "position": {
-                        "x": 425.0,
-                        "y": -3349.0,
+                        "x": -635.0,
+                        "y": -5469.0,
                         "z": 1120
                     }
                 },
@@ -620,8 +620,8 @@
                     "weight_kg": 285,
                     "stack_level": 1034,
                     "position": {
-                        "x": 425.0,
-                        "y": -3349.0,
+                        "x": -635.0,
+                        "y": -5469.0,
                         "z": 1680
                     }
                 }
@@ -641,8 +641,8 @@
                     "weight_kg": 285,
                     "stack_level": -1,
                     "position": {
-                        "x": -635.0,
-                        "y": -1229.0,
+                        "x": 425.0,
+                        "y": -169.0,
                         "z": 0
                     }
                 },
@@ -657,8 +657,8 @@
                     "weight_kg": 285,
                     "stack_level": 1036,
                     "position": {
-                        "x": -635.0,
-                        "y": -1229.0,
+                        "x": 425.0,
+                        "y": -169.0,
                         "z": 560
                     }
                 },
@@ -673,8 +673,8 @@
                     "weight_kg": 285,
                     "stack_level": 1037,
                     "position": {
-                        "x": -635.0,
-                        "y": -1229.0,
+                        "x": 425.0,
+                        "y": -169.0,
                         "z": 1120
                     }
                 },
@@ -689,9 +689,384 @@
                     "weight_kg": 285,
                     "stack_level": 1038,
                     "position": {
+                        "x": 425.0,
+                        "y": -169.0,
+                        "z": 1680
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_11",
+            "objects": [
+                {
+                    "id": 1040,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 425.0,
+                        "y": -2289.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "id": 1041,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1040,
+                    "position": {
+                        "x": 425.0,
+                        "y": -2289.0,
+                        "z": 560
+                    }
+                },
+                {
+                    "id": 1042,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1041,
+                    "position": {
+                        "x": 425.0,
+                        "y": -2289.0,
+                        "z": 1120
+                    }
+                },
+                {
+                    "id": 1043,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1042,
+                    "position": {
+                        "x": 425.0,
+                        "y": -2289.0,
+                        "z": 1680
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_12",
+            "objects": [
+                {
+                    "id": 1044,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 425.0,
+                        "y": -1229.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "id": 1045,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1044,
+                    "position": {
+                        "x": 425.0,
+                        "y": -1229.0,
+                        "z": 560
+                    }
+                },
+                {
+                    "id": 1046,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1045,
+                    "position": {
+                        "x": 425.0,
+                        "y": -1229.0,
+                        "z": 1120
+                    }
+                },
+                {
+                    "id": 1047,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1046,
+                    "position": {
+                        "x": 425.0,
+                        "y": -1229.0,
+                        "z": 1680
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_13",
+            "objects": [
+                {
+                    "id": 1048,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": -1,
+                    "position": {
+                        "x": -635.0,
+                        "y": -1229.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "id": 1049,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1048,
+                    "position": {
+                        "x": -635.0,
+                        "y": -1229.0,
+                        "z": 560
+                    }
+                },
+                {
+                    "id": 1050,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1049,
+                    "position": {
+                        "x": -635.0,
+                        "y": -1229.0,
+                        "z": 1120
+                    }
+                },
+                {
+                    "id": 1051,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 560,
+                    "weight_kg": 285,
+                    "stack_level": 1050,
+                    "position": {
                         "x": -635.0,
                         "y": -1229.0,
                         "z": 1680
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_14",
+            "objects": [
+                {
+                    "id": 2004,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": -635.0,
+                        "y": -3349.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_15",
+            "objects": [
+                {
+                    "id": 2005,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": -635.0,
+                        "y": -169.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_16",
+            "objects": [
+                {
+                    "id": 2006,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 425.0,
+                        "y": 4071.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_17",
+            "objects": [
+                {
+                    "id": 2007,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": -635.0,
+                        "y": 5131.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_18",
+            "objects": [
+                {
+                    "id": 2000,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 425.0,
+                        "y": -5469.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_19",
+            "objects": [
+                {
+                    "id": 2001,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": -635.0,
+                        "y": -2289.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_20",
+            "objects": [
+                {
+                    "id": 2002,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": -635.0,
+                        "y": 4071.0,
+                        "z": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Stapel_21",
+            "objects": [
+                {
+                    "id": 2003,
+                    "type": "Quader",
+                    "dimensions": {
+                        "laenge": 1060,
+                        "breite": 1060
+                    },
+                    "height": 800,
+                    "weight_kg": 452.4,
+                    "stack_level": -1,
+                    "position": {
+                        "x": 425.0,
+                        "y": -3349.0,
+                        "z": 0
                     }
                 }
             ]

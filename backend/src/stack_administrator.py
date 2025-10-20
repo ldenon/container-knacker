@@ -77,7 +77,7 @@ class stack_administrator:
         stacks = []
         # go through stacks
         assert len(self.stacks) == len(self.stack_positions), "Number of stacks and positions must match"
-        for i in range(len(self.stacks)):
+        for i in range(len(self.stack_positions)):
             ground_position_x = self.stack_positions[i].get("placement").get("position").get("x", 0)
             ground_position_y = self.stack_positions[i].get("placement").get("position").get("y", 0)
             stack_name = self.stack_positions[i].get("name", f"Stapel_{i+1}")

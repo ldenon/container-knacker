@@ -18,7 +18,7 @@ print("Breite des Containers in mm:", container_dim.width)
 # Create a list of all objects in the json -> transform to rectangle or cylinder
 # 200 objects for stacking PROPABLY TOO MUCH!!!
 objects = parser.get_objects()
-objects = objects[:40]
+objects = objects[:60]
 
 
 # inspect one example object
