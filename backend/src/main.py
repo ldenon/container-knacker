@@ -18,7 +18,7 @@ print("Breite des Containers in mm:", container_dim.width)
 # Create a list of all objects in the json -> transform to rectangle or cylinder
 # 200 objects for stacking PROPABLY TOO MUCH!!!
 objects = parser.get_objects()
-objects = objects[:12]
+objects = objects[:40]
 
 
 # inspect one example object
@@ -51,9 +51,9 @@ parser.create_object_list_from_stacks(stack_object_list)
 
 ### Use Algorithm2d algorithm to create placed.json
 ## run algorithm2d as process
-# path = os.path.dirname(__file__)
-# comb_path = os.path.join(path, "algorithm2d.py")
-# subprocess.run(["python", comb_path])
+path = os.path.dirname(__file__)
+comb_path = os.path.join(path, "algorithm2d.py")
+subprocess.run(["python", comb_path])
 ## This should create placed.json file
 
 path = os.path.dirname(__file__)

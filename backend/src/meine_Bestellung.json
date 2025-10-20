@@ -38,6 +38,83 @@
                 "laenge": 1060,
                 "breite": 1060
             }
+        },
+        {
+            "name": "Stapel_4",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_5",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_6",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_7",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_8",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_9",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
+        },
+        {
+            "name": "Stapel_10",
+            "form": "Quader",
+            "hoehe": 22400,
+            "gewicht_kg": 1140,
+            "grundflaeche": 1123600,
+            "abmessungen": {
+                "laenge": 1060,
+                "breite": 1060
+            }
         }
     ]
 }
